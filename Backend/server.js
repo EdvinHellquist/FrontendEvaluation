@@ -1,15 +1,17 @@
 import express from "express";
-import authRoutes from "./routes/authRoutes"
-const app = express()
 
-app.use('/auth/', authRoutes)
+import authRouter from "./routes/authRoutes.js"
+const app = express()
+const port = 3004
+app.use(express.json())
+
+app.use('/auth', authRouter)
 
 app.get('/', (req, res) => {
   console.log("Start")
   res.status(200).json({message: "Hello World"})
 })
 
-
-
-
-app.listen(3000)
+app.listen(port, () => {
+  console.log(`App listnening on port ${port}`)
+})
