@@ -1,0 +1,18 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+/* Logo Styling */
+.navbar-logo .logo {
+  height: 50px;
+}
+
+/* Profile Icon Styling */
+.navbar-profile .profile-icon {
+  height: 40px;
+  cursor: pointer;
+}
