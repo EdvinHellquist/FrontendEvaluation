@@ -1,6 +1,6 @@
 import express from "express"
 import jwt from "jsonwebtoken"
-import bcrypt from "bcrypt"
+import bcrypt from 'bcryptjs';
 
 const authRouter = express.Router()
 const secret = process.env.JWT_SECRET

@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../components/navbar";
 import SearchBar from "../components/searchBar";
 import { useState } from "react";
-import { Link } from 'react-router-dom';
 import ProductPreview from "../components/productpreview";
  /**hämta från server */
 const items = [
