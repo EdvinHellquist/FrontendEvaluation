@@ -1,5 +1,5 @@
 import pkg from 'pg';
-
+import 'dotenv/config'
 const { Pool } = pkg;
 
 const usr = process.env.POSTGRES_USER;

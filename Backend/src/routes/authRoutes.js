@@ -4,6 +4,7 @@ import bcrypt from 'bcryptjs';
 import { body, validationResult } from 'express-validator';
 import { query } from '../../db.js';
 import { authenticateToken } from "../authmethods.js";
+import 'dotenv/config'
 
 const authRouter = express.Router()
 const secret = process.env.JWT_SECRET
@@ -106,7 +107,7 @@ authRouter.post('/register', [
            VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id, name, mail, username, role`,
           [name, mail, username, hashedPassword, address, zipcode, city, role || 'user']
       );
-      res.status(201).json({ message: 'User registered successfully', user: newUser.rows[0] });
+      res.status(201).json({ message: 'User registered successfully', user: newUser});
   } catch (err) {
       console.error(err.message);
       res.status(500).json({ error: 'Server error' });

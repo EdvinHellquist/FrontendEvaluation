@@ -1,25 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
-const items = [
-  { id: 1, name: 'Item 1', description: 'Description of Item 1', details: 'More details about Item 1' },
-  { id: 2, name: 'Item 2', description: 'Description of Item 2', details: 'More details about Item 2' },
-  { id: 3, name: 'Item 3', description: 'Description of Item 3', details: 'More details about Item 3' },
-  { id: 4, name: 'Item 4', description: 'Description of Item 4', details: 'More details about Item 4' },
-];
+import Navbar from '../components/navbar';
+import { url, port } from '../../serverip';
+import '../css/product.css';
 
 export default function Product() {
   const { id } = useParams();
-  const item = items.find(i => i.id === parseInt(id));
-  if (!item) {
-    return <p>Item not found</p>;
-  }
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [productImage, setProductImage] = useState(null);
 
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        console.log(url + port + `/shop/products${id}`);
+        const response = await fetch(url + ':' + port + `/shop/products${id}`);
+        const data = await response.json();
+        setProduct(data);
+        const image = await import(`../assets/images/${data.image}`/* @vite-ignore */);
+        setProductImage(image.default);
+      } catch (error) {
+        console.error('Error fetching product details:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProduct();
+  }, [id]);
+
+  if (loading) return <p>Loading...</p>;
+  if (!product) return <p>Product not found</p>;
   return (
     <div>
-      {/*gör till komponent*/ }
-      <h2>{item.name}</h2>
-      <p>{item.details}</p>
+      <Navbar/>
+      <div className="product-details">
+        {productImage && <img src={productImage} alt={product.name} className="product-image" />}
+        <h2>{product.name}</h2>
+        <p>{product.description}</p>
+        <p><strong>Price:</strong> ${product.price}</p>
+        <div className="color-swatch" style={{ backgroundColor: product.color }}></div>
+      </div>
     </div>
+    
   );
 }
