@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Navbar from '../components/navbar';
 import { url, port } from '../../serverip';
 import '../css/product.css';
+import Footer from '../components/footer';
 
 export default function Product() {
   const { id } = useParams();
@@ -41,6 +42,7 @@ export default function Product() {
         <p><strong>Price:</strong> ${product.price}</p>
         <div className="color-swatch" style={{ backgroundColor: product.color }}></div>
       </div>
+      <Footer></Footer>
     </div>
     
   );

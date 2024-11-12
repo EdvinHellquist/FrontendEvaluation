@@ -2,6 +2,9 @@ import express from "express";
 import authRouter from "./src/routes/authRoutes.js"
 import productRouter from "./src/routes/productRoutes.js";
 import cors from 'cors'
+import searchRouter from "./src/routes/searchRoutes.js";
+import contactRouter from "./src/routes/contactRoutes.js";
+
 
 const app = express()
 const port = 3004
@@ -14,6 +17,8 @@ app.use(cors({
 
 app.use('/auth', authRouter)
 app.use('/shop', productRouter)
+app.use('/search', searchRouter)
+app.use('/contact', contactRouter)
 
 app.get('/', (req, res) => {
   console.log("Start")

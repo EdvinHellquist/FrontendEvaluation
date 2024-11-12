@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../css/Profile.css';
 import { url, port } from '../../serverip';
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 export default function Profile() {
   const navigate = useNavigate();
@@ -10,8 +11,8 @@ export default function Profile() {
   const [user, setUser] = useState(null);
   const [errormessage, setErrormessage] = useState(null);
   const [form, setForm] = useState({ mail: '', address: '', zipcode: '', city: '' });
-  const [loginInfo, setLoginInfo] = useState({ email: '', password: '' });
-  const [registerInfo, setRegisterInfo] = useState({ name: '', email: '', username: '', password: '', address: '', zipcode: 0, city: '' });
+  const [loginInfo, setLoginInfo] = useState({ mail: '', password: '' });
+  const [registerInfo, setRegisterInfo] = useState({ name: '', mail: '', username: '', password: '', address: '', zipcode: 0, city: '' });
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -30,6 +31,7 @@ export default function Profile() {
         body: JSON.stringify(loginInfo),
       });
       const data = await response.json();
+      console.log(data);
       if (data.token) {
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', JSON.stringify(data));
@@ -54,7 +56,8 @@ export default function Profile() {
       });
       const data = await response.json();
       if (data.user) {
-        console.log('log in');
+        setLoginInfo({mail: registerInfo.mail, password: registerInfo.password});
+        await handleLogin();
       } else {
         setErrormessage(data.message);
       }
@@ -64,6 +67,11 @@ export default function Profile() {
   };
 
   const handleUpdate = async () => {
+    if(!form.address) form.address = user.address;
+    if(!form.city) form.city = user.city;
+    if(!form.mail) form.mail = user.mail;
+    if(!form.zipcode) form.zipcode = user.zipcode;
+
     try {
       const token = localStorage.getItem('token');
       const response = await fetch(url + ':'+ port +'/auth/update-user', {
@@ -87,6 +95,8 @@ export default function Profile() {
   };
 
   const handleLogout = () => {
+    setLoginInfo({ mail: '', password: '' });
+    setForm({ name: '', mail: '', username: '', password: '', address: '', zipcode: 0, city: '' });
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     setIsAuthenticated(false);
@@ -104,8 +114,8 @@ export default function Profile() {
           <input
             type="email"
             placeholder="Email"
-            value={loginInfo.email}
-            onChange={(e) => setLoginInfo({ ...loginInfo, email: e.target.value })}
+            value={loginInfo.mail}
+            onChange={(e) => setLoginInfo({ ...loginInfo, mail: e.target.value })}
           />
           <input
             type="password"
@@ -126,8 +136,8 @@ export default function Profile() {
           <input
             type="email"
             placeholder="Email"
-            value={registerInfo.email}
-            onChange={(e) => setRegisterInfo({ ...registerInfo, email: e.target.value })}
+            value={registerInfo.mail}
+            onChange={(e) => setRegisterInfo({ ...registerInfo, mail: e.target.value })}
           />
           <input
             type="text"
@@ -174,17 +184,18 @@ export default function Profile() {
         <h2>Your Profile</h2>
         <form>
           <label>Email:</label>
-          <input type="email" name="mail" value={form.mail} onChange={(e) => setForm({ ...form, mail: e.target.value })} />
+          <input type="email" name="mail" placeholder={user.mail} value={form.mail} onChange={(e) => setForm({ ...form, mail: e.target.value })} />
           <label>Address:</label>
-          <input type="text" name="address" value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })} />
+          <input type="text" name="address" placeholder={user.address} value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })} />
           <label>Zipcode:</label>
-          <input type="text" name="zipcode" value={form.zipcode} onChange={(e) => setForm({ ...form, zipcode: e.target.value })} />
+          <input type="text" name="zipcode" placeholder={user.zipcode} value={form.zipcode} onChange={(e) => setForm({ ...form, zipcode: e.target.value })} />
           <label>City:</label>
-          <input type="text" name="city" value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} />
+          <input type="text" name="city" placeholder={user.city} value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} />
           <button type="button" onClick={handleUpdate}>Update Profile</button>
         </form>
         <button onClick={handleLogout}>Logout</button>
       </div>
+      <Footer></Footer>
     </div>
     
   );
