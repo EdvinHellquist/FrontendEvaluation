@@ -6,13 +6,10 @@
   background-color: white;
   width: 90vw;
 }
-
-/* Logo Styling */
 .navbar-logo .logo {
   height: 50px;
 }
 
-/* Profile Icon Styling */
 .navbar-profile .profile-icon {
   height: 40px;
   cursor: pointer;

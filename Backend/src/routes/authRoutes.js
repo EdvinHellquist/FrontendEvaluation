@@ -133,7 +133,7 @@ authRouter.post("/login", async (req, res) => {
      });
     }
    } catch (err) {
-    console.err(err)
+    console.error(err)
     res.status(500).json({
      message: "An internal error occured",
     });
