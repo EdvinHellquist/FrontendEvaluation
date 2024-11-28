@@ -88,13 +88,12 @@
         <button type="submit">Update Profile</button>
       </form>
       <button @click="handleLogout">Logout</button>
+      <button v-if="user.role === 'admin'" @click="handleDeleteAccount">Delete Account</button>
     </div>
   </div>
 </template>
 
 <script>
-import Navbar from '../components/Navbar.vue';
-import Footer from '../components/Footer.vue';
 import { url, port } from '../../serverip';
 
 export default {
@@ -198,7 +197,33 @@ export default {
       localStorage.removeItem('user');
       this.isAuthenticated = false;
       this.user = null;
-    }
+    },
+    async handleDeleteAccount() {
+      const confirmed = window.confirm('Are you sure you want to delete your account?');
+
+      if (!confirmed) return;
+      const response = await fetch(`${url}:${port}/auth/delete`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: this.user.id }),
+      })
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error('Failed to delete account.');
+          }
+        })
+        .then((data) => {
+          alert('Account deleted successfully.');
+          this.handleLogout()
+        })
+        .catch((error) => {
+          console.error('Error deleting account:', error);
+        });
+    },
   }
 };
 </script>

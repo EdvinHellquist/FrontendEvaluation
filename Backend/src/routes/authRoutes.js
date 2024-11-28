@@ -9,20 +9,6 @@ import 'dotenv/config'
 const authRouter = express.Router()
 const secret = process.env.JWT_SECRET
 
-authRouter.route("/")
-.get(async (req, res) => {
-  try {
-    const result = await query('SELECT * FROM users');
-    res.json(result.rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Internal Server Error');
-  }
-})
-.delete(async(req, res) => {
-  res.send("you sure?")
-})
-
 authRouter.put('/update-user', authenticateToken, [
   body('mail').optional().isEmail().withMessage('Please enter a valid email.'),
   body('address').optional().trim(),
@@ -112,7 +98,7 @@ authRouter.post("/login", async (req, res) => {
   try {
     const { mail } = req.body;
     const result = await query('SELECT * FROM users WHERE mail = $1', [mail]);
-    if (!result) {
+    if (result.rowCount == 0) {
       return res.status(401).json({ message: 'Invalid email or password' });
     }
     const { id, address, zip_code, city, role, password } = result.rows[0];
@@ -140,6 +126,25 @@ authRouter.post("/login", async (req, res) => {
    }
 })
 
+authRouter.delete('/delete', async (req, res) => {
+  const { id } = req.body;
+  if (!id) {
+    return res.status(400).json({ error: 'User ID is required' });
+  }
+  try {
+    const result = await query('DELETE FROM users WHERE id = $1', [id]);
+
+    if (result.rowCount === 0) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    res.status(200).json({ message: 'User deleted successfully', user: result.rows[0] });
+  } catch (error) {
+    console.error('Error deleting user:', error);
+    res.status(500).json({ error: 'An error occurred while deleting the user' });
+  }
+});
+
 authRouter.post('/logout', (req, res) => {
   res.status(200).json({ message: 'Logged out successfully' });
 });
@@ -150,13 +155,9 @@ function generateToken(id, role, mail) {
     role: role,
     id: id,
     email: mail,
-    //Potential additions
-    //iat: Math.floor(Date.now() / 1000),
-    //iss: 'your-app-name',
    },
    secret,
    {
-    //algorithm: "HS256",
     expiresIn: "1h",
    }
   );

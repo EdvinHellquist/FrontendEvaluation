@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <SearchBar :searchQuery="searchQuery" @updateQuery="setSearchQuery" />
+    <SearchBar v-model="searchQuery" />
     <div class="item-grid">
       <template v-if="items.length > 0">
         <ProductPreview 
@@ -18,18 +18,14 @@
 
 <script>
 import { ref, onMounted, watch } from 'vue';
-import Navbar from '../components/navbar.vue';
-import SearchBar from '../components/searchBar.vue';
-import ProductPreview from '../components/productpreview.vue';
-import Footer from '../components/footer.vue';
+import SearchBar from '../components/SearchBar.vue';
+import ProductPreview from '../components/ProductPreview.vue';
 import { url, port } from '../../serverip';
 
 export default {
   components: {
-    Navbar,
     SearchBar,
     ProductPreview,
-    Footer
   },
   setup() {
     const searchQuery = ref('');
@@ -37,8 +33,6 @@ export default {
 
     const fetchItems = async (query) => {
       const endpoint = query ? `/search?q=${encodeURIComponent(query)}` : '/shop/products';
-      console.log(`${url}:${port}${endpoint}`);
-
       try {
         const response = await fetch(`${url}:${port}${endpoint}`, {
           method: 'GET',
@@ -48,7 +42,6 @@ export default {
         });
         if (response.ok) {
           const result = await response.json();
-          console.log(result);
           items.value = result.products || result;
         } else {
           console.error("Error fetching data");

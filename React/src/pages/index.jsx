@@ -12,8 +12,6 @@ export default function Index() {
   useEffect(() => {
     async function fetchItems(query) {
       const endpoint = query ? `/search?q=${encodeURIComponent(query)}` : '/shop/products';
-      console.log(url + ':' + port + endpoint);
-
       try {
         const response = await fetch(url + ':' + port + endpoint, {
           method: 'GET',
@@ -23,7 +21,6 @@ export default function Index() {
         });
         if (response.ok) {
           const result = await response.json();
-          console.log(result);
           setItems(result.products || result);
         } else {
           console.error("Error fetching data");

@@ -99,6 +99,34 @@
     loginInfo = { mail: '', password: '' };
     form = { mail: '', address: '', zipcode: '', city: '' };
   }
+  async function handleDeleteAccount() {
+    const confirmed = window.confirm('Are you sure you want to delete your account?');
+
+    if (!confirmed) return;
+
+    try {
+      const response = await fetch(`${url}:${port}/auth/delete`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ id: user.id })
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        alert('Account deleted successfully.');
+        handleLogout();
+      } else if (response.status === 404) {
+        alert('User not found.');
+      } else {
+        alert('Failed to delete the account.');
+      }
+    } catch (error) {
+      console.error('Error deleting account:', error);
+      alert('An error occurred while deleting the account.');
+    }
+  }
 </script>
 
 <style>
@@ -241,6 +269,9 @@ button[type="button"]:hover {
         <button type="button" on:click={handleUpdate}>Update Profile</button>
       </form>
       <button on:click={handleLogout}>Logout</button>
+      {#if user.role === 'admin'}
+        <button on:click={handleDeleteAccount}>Delete Account</button>
+      {/if}
     </div>
     <Footer />
   </div>

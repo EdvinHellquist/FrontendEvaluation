@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { json, useNavigate } from 'react-router-dom';
 import '../css/Profile.css';
 import { url, port } from '../../serverip';
 import Navbar from '../components/navbar';
@@ -31,12 +31,12 @@ export default function Profile() {
         body: JSON.stringify(loginInfo),
       });
       const data = await response.json();
-      console.log(data);
       if (data.token) {
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', JSON.stringify(data));
         setIsAuthenticated(true);
         setUser(data);
+        navigate("/")
       } else {
         setErrormessage(data.message);
       }
@@ -46,8 +46,6 @@ export default function Profile() {
   };
 
   const handleRegister = async () => {
-    console.log(registerInfo);
-    console.log(url + ':'+ port +'/auth/register');
     try {
       const response = await fetch(url + ':'+ port +'/auth/register', {
         method: 'POST',
@@ -57,7 +55,6 @@ export default function Profile() {
       const data = await response.json();
       if (data.user) {
         setLoginInfo({mail: registerInfo.mail, password: registerInfo.password});
-        await handleLogin();
       } else {
         setErrormessage(data.message);
       }
@@ -102,6 +99,31 @@ export default function Profile() {
     setIsAuthenticated(false);
     setUser(null);
   };
+
+  const handleDeleteAccount = async () => {
+    const userId = user.id; 
+    const confirmed = window.confirm('Are you sure you want to delete your account?');
+    if (!confirmed) return;
+    try {
+      const response = await fetch(url + ':'+ port +'/auth/delete', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({id: userId})
+      });
+      if (response.ok) {
+        alert('Account deleted successfully.');
+        handleLogout();
+      } else if (response.status === 404) {
+        alert('User not found.');
+      } else {
+        alert('Failed to delete the account.');
+      }
+    } catch (error) {
+      console.error('Error deleting account:', error);
+      alert('An error occurred while deleting the account.');
+    }
+  };
+  
 
   if (!isAuthenticated) {
     return (
@@ -194,6 +216,9 @@ export default function Profile() {
           <button type="button" onClick={handleUpdate}>Update Profile</button>
         </form>
         <button onClick={handleLogout}>Logout</button>
+        {user.role === "admin" && (
+          <button onClick={handleDeleteAccount}>Delete Account</button>
+        )}
       </div>
       <Footer></Footer>
     </div>

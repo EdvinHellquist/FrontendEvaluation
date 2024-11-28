@@ -14,7 +14,6 @@ export default function Product() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        console.log(url + port + `/shop/products${id}`);
         const response = await fetch(url + ':' + port + `/shop/products${id}`);
         const data = await response.json();
         setProduct(data);

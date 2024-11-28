@@ -1,4 +1,5 @@
 import express from "express";
+import helmet from 'helmet';
 import authRouter from "./src/routes/authRoutes.js"
 import productRouter from "./src/routes/productRoutes.js";
 import cors from 'cors'
@@ -8,6 +9,8 @@ import contactRouter from "./src/routes/contactRoutes.js";
 
 const app = express()
 const port = 3004
+app.use(helmet());
+app.disable('x-powered-by');
 app.use(express.json())
 app.use(cors({
   origin: 'http://localhost:5173',
@@ -20,11 +23,14 @@ app.use('/shop', productRouter)
 app.use('/search', searchRouter)
 app.use('/contact', contactRouter)
 
-app.get('/', (req, res) => {
-  console.log("Start")
-  res.status(200).json({message: "Hello World"})
-})
 
+app.use((req, res, next) => {
+  res.removeHeader('Server');
+  next();
+});
+app.get('/', (req, res) => {
+  res.send('Hello World');
+})
 app.listen(port, () => {
   console.log(`App listnening on port ${port}`)
 })

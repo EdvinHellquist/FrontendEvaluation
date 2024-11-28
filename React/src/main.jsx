@@ -5,9 +5,6 @@ import { Routes } from './app/routes';
 import './index.css'
 
 const root = createRoot(document.getElementById('root'));
-if(!root) {
-  console.log("wth");
-}
 
 root.render(
   <StrictMode>

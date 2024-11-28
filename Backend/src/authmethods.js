@@ -3,7 +3,6 @@ import jwt from "jsonwebtoken"
 export const authenticateToken = (req, res, next) => {
   const token = req.header('Authorization')?.split(' ')[1];
   if (!token) {
-    console.log("not token");
     return res.status(401).json({ error: 'Access denied' });
   }
 
@@ -12,7 +11,6 @@ export const authenticateToken = (req, res, next) => {
       req.user = verified;
       next();
   } catch (err) {
-    console.log("catching" + err);
       res.status(403).json({ error: 'Invalid token' });
   }
 };

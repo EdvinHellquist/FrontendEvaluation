@@ -4,7 +4,7 @@
       type="text"
       placeholder="Search items..."
       :value="searchQuery"
-      @input="$emit('update:searchQuery', $event.target.value)"
+      @input="$emit('update:modelValue', $event.target.value)"
     />
   </div>
 </template>
@@ -13,9 +13,19 @@
 export default {
   name: 'SearchBar',
   props: {
-    searchQuery: {
+    modelValue: {
       type: String,
       required: true
+    }
+  },
+  computed: {
+    searchQuery: {
+      get() {
+        return this.modelValue;
+      },
+      set(value) {
+        this.$emit('update:modelValue', value);
+      }
     }
   }
 };

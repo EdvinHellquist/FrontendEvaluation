@@ -35,21 +35,17 @@ productRouter.get('/products:id', async (req, res) => {
 
 
 productRouter.put('/products/:id', isAdmin, [
-    // Validate inputs
     body('price').optional().isFloat({ gt: 0 }).withMessage('Price must be a positive number'),
     body('description').optional().isString().trim().withMessage('Description must be a valid string')
 ], async (req, res) => {
     const { id } = req.params;
     const { price, description } = req.body;
-
-    // Handle validation errors
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
     }
 
     try {
-        // Update only the provided fields
         const product = await query(
             `UPDATE products
               SET price = COALESCE($1, price),

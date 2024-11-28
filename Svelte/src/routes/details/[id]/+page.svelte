@@ -4,7 +4,6 @@
   import { page } from '$app/stores';
   const url = 'http://localhost';
   const port = '3004';
-  console.log($page);
   let product = $state(null);
   let loading = $state(true);
   let productImage = $state(null);
@@ -12,8 +11,6 @@
   const fetchProduct = async () => {
     try {
       const { params } = $page;
-      console.log("hejhej" + params);
-      //console.log(`${url}:${port}/shop/products${params.id}`);
       const response = await fetch(`${url}:${port}/shop/products${params.id}`);
       const data = await response.json();
       product = data;
