@@ -1,0 +1,53 @@
+                   
+                   
+┌─────────────────┐
+│ 6 Code Findings │
+└─────────────────┘
+                                            
+  [36m[22m[24m  ZapReports/FullReact.html[0m
+   ❯❯❱ [1mgeneric.secrets.security.detected-jwt-token.detected-jwt-token[0m
+          JWT token detected          
+          Details: https://sg.run/05N5
+                                      
+          1800┆ <pre><code>{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlc
+               iIsImlkIjoyNiwiZW1haWwiOiJyZWFjdHRlc3RAdGVzdC5zZSIsImlhdCI6MTczMzQ5NzQ5MiwiZXhwIjoxNzMzNTAx
+               MDkyfQ.zYGOziL4DocAQk_3CRDNYTBO2lRgb7M8ZR_VLtOvb-                                          
+               0&quot;,&quot;role&quot;:&quot;user&quot;,&quot;id&quot;:26,&quot;mail&quot;:&quot;reacttes
+               t@test.se&quot;,&quot;address&quot;:&quot;test&quot;,&quot;zipcode&quot;:&quot;34412&quot;,
+               &quot;city&quot;:&quot;testtown&quot;}</code></pre>                                        
+            ⋮┆----------------------------------------
+          1812┆ <td><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlkIjoyNiwiZW1haW
+               wiOiJyZWFjdHRlc3RAdGVzdC5zZSIsImlhdCI6MTczMzQ5NzQ5MiwiZXhwIjoxNzMzNTAxMDkyfQ.zYGOziL4DocAQk
+               _3CRDNYTBO2lRgb7M8ZR_VLtOvb-0</code></pre></td>                                            
+                                                   
+  [36m[22m[24m  ZapReports/FullSvelteReport.html[0m
+   ❯❯❱ [1mgeneric.secrets.security.detected-jwt-token.detected-jwt-token[0m
+          JWT token detected          
+          Details: https://sg.run/05N5
+                                      
+          2100┆ <pre><code>{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlc
+               iIsImlkIjoyNCwiZW1haWwiOiJzdmVsdGV0ZXN0QHRlc3Quc2UiLCJpYXQiOjE3MzM0OTI5MzgsImV4cCI6MTczMzQ5
+               NjUzOH0.N9aSGXZVa9EOai2fgwSj1ENGhE3TUaiqw3XmmtYEk00&quot;,&quot;role&quot;:&quot;user&quot;
+               ,&quot;id&quot;:24,&quot;mail&quot;:&quot;sveltetest@test.se&quot;,&quot;address&quot;:&quo
+               t;test&quot;,&quot;zipcode&quot;:&quot;12312&quot;,&quot;city&quot;:&quot;testtown&quot;}</
+               code></pre>                                                                                
+            ⋮┆----------------------------------------
+          2112┆ <td><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlkIjoyNCwiZW1haW
+               wiOiJzdmVsdGV0ZXN0QHRlc3Quc2UiLCJpYXQiOjE3MzM0OTI5MzgsImV4cCI6MTczMzQ5NjUzOH0.N9aSGXZVa9EOa
+               i2fgwSj1ENGhE3TUaiqw3XmmtYEk00</code></pre></td>                                           
+                                                
+  [36m[22m[24m  ZapReports/FullVueReport.html[0m
+   ❯❯❱ [1mgeneric.secrets.security.detected-jwt-token.detected-jwt-token[0m
+          JWT token detected          
+          Details: https://sg.run/05N5
+                                      
+          2231┆ <pre><code>{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlc
+               iIsImlkIjoyNywiZW1haWwiOiJ2dWV0ZXN0QHRlc3Quc2UiLCJpYXQiOjE3MzM0OTk0OTIsImV4cCI6MTczMzUwMzA5
+               Mn0.He6jRW93JkDOwrD5kqKJemHmtCdGYIaJi62VBQIid9I&quot;,&quot;role&quot;:&quot;user&quot;,&qu
+               ot;id&quot;:27,&quot;mail&quot;:&quot;vuetest@test.se&quot;,&quot;address&quot;:&quot;adres
+               s&quot;,&quot;zipcode&quot;:&quot;12345&quot;,&quot;city&quot;:&quot;testtown&quot;}</code>
+               </pre>                                                                                     
+            ⋮┆----------------------------------------
+          2243┆ <td><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlkIjoyNywiZW1haW
+               wiOiJ2dWV0ZXN0QHRlc3Quc2UiLCJpYXQiOjE3MzM0OTk0OTIsImV4cCI6MTczMzUwMzA5Mn0.He6jRW93JkDOwrD5k
+               qKJemHmtCdGYIaJi62VBQIid9I</code></pre></td>                                               

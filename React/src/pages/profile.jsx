@@ -1,12 +1,11 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
-import { json, useNavigate } from 'react-router-dom';
 import '../css/Profile.css';
 import { url, port } from '../../serverip';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
 export default function Profile() {
-  const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
   const [errormessage, setErrormessage] = useState(null);
@@ -36,7 +35,6 @@ export default function Profile() {
         localStorage.setItem('user', JSON.stringify(data));
         setIsAuthenticated(true);
         setUser(data);
-        navigate("/")
       } else {
         setErrormessage(data.message);
       }
@@ -55,6 +53,7 @@ export default function Profile() {
       const data = await response.json();
       if (data.user) {
         setLoginInfo({mail: registerInfo.mail, password: registerInfo.password});
+        handleLogin();
       } else {
         setErrormessage(data.message);
       }

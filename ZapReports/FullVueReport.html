@@ -1,0 +1,3043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZAP by Checkmarx Scanning Report</title>
+<link
+	href="FullVueReport/normalize/normalize.css" rel="stylesheet">
+<link
+	href="FullVueReport/themes/original/main.css" rel="stylesheet">
+<link
+	href="FullVueReport/themes/original/colors.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>ZAP by Checkmarx Scanning Report</h1>
+		<p>
+			<span>Generated with</span> <a href="https://zaproxy.org"><img
+				src="FullVueReport/zap32x32.png" alt="The ZAP logo" class="zap-logo">ZAP</a>
+			<span>on Fri 6 Dec 2024, at 16:39:36</span>
+		</p>
+		<p>ZAP Version: 2.15.0</p>
+		<p>
+			ZAP is supported by the <a href="https://crashoverride.com/?zap=rep">Crash Override Open Source Fellowship</a>
+		</p>
+	</header>
+
+	<main>
+
+		<section id="contents" class="contents">
+			<h2>Contents</h2>
+			<nav>
+				<ol>
+					<li><a
+						href="#about-this-report">About this report</a>
+						<ol>
+							<li><a
+								href="#report-description">Report description</a></li>
+							<li><a
+								href="#report-parameters">Report parameters</a></li>
+						</ol></li>
+					<data-th-block>
+					<li><a
+						href="#summaries">Summaries</a>
+						<ol>
+							<li><a
+								href="#risk-confidence-counts">Alert counts by risk and confidence</a></li>
+							<li><a
+								href="#site-risk-counts">Alert counts by site and risk</a></li>
+							<li><a
+								href="#alert-type-counts">Alert counts by alert type</a></li>
+						</ol></li>
+					<li><a
+						href="#alerts">Alerts</a>
+						<ol>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-3-confidence-1"><span>Risk</span>=<span
+									class="risk-level">High</span>, <span>Confidence</span>=<span
+									class="confidence-level">Low</span> <span>(1)</span></a></li>
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-2-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Medium</span>, <span>Confidence</span>=<span
+									class="confidence-level">High</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-2-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Medium</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(3)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-1-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Low</span>, <span>Confidence</span>=<span
+									class="confidence-level">High</span> <span>(2)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-1-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Low</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-1-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Low</span>, <span>Confidence</span>=<span
+									class="confidence-level">Low</span> <span>(1)</span></a></li>
+							  
+							
+							
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-0-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Informational</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(2)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-0-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Informational</span>, <span>Confidence</span>=<span
+									class="confidence-level">Low</span> <span>(2)</span></a></li>
+							  
+						</ol></li>
+					<li><a
+						href="#appendix">Appendix</a>
+						<ol>
+							<li><a
+								href="#alert-types">Alert types</a></li>
+						</ol></li>
+					</data-th-block>
+				</ol>
+			</nav>
+		</section>
+
+		<section
+			id="about-this-report" class="about-this-report">
+			<h2>About this report</h2>
+
+			<section
+				id="report-description">
+				<h3>Report description</h3>
+				<div class="report-description--container">
+					
+
+<p>
+	
+	  Final full Zap report for the Vue prjoect 
+	  
+</p>
+ 
+				</div>
+			</section>
+
+			<section
+				id="report-parameters">
+				<h3>Report parameters</h3>
+				<div class="report-parameters--container">
+					<h4>Contexts</h4>
+					
+					
+					<p>No contexts were selected, so all contexts were included by default.</p>
+					  
+
+					<h4>Sites</h4>
+					
+					<p>The following sites were included:</p>
+					<ul class="sites-list">
+						<li><span class="site">https://update.googleapis.com</span></li>
+						<li><span class="site">https://clientservices.googleapis.com</span></li>
+						<li><span class="site">https://optimizationguide-pa.googleapis.com</span></li>
+						<li><span class="site">https://content-autofill.googleapis.com</span></li>
+						<li><span class="site">http://127.0.0.1:3004</span></li>
+						<li><span class="site">https://accounts.google.com</span></li>
+						<li><span class="site">http://localhost:5173</span></li>
+					</ul>
+					
+					<p>(If no sites were selected, all sites were included by default.)</p>
+					<p>An included site must also be within one of the included contexts for its data to be included in the report.</p>
+
+					<h4>Risk levels</h4>
+					<p>
+						<span>Included</span>:
+						 
+						<span class="included-risk-codes"><span class="risk-level">High</span>, <span class="risk-level">Medium</span>, <span class="risk-level">Low</span>, <span class="risk-level">Informational</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						 <span>None</span>
+						
+					</p>
+
+					<h4>Confidence levels</h4>
+					<p>
+						<span>Included</span>:
+						
+						
+						<span class="included-confidence-codes"><span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						
+						
+						<span class="included-confidence-codes"> <span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span>, <span class="confidence-level">False Positive</span></span>
+					</p>
+				</div>
+			</section>
+		</section>
+
+		
+		<section>
+			
+		</section>
+		
+		<section id="summaries" class="summaries">
+			<h2>Summaries</h2>
+
+			<section
+				id="risk-confidence-counts">
+				<h3>Alert counts by risk and confidence</h3>
+				<table class="risk-confidence-counts-table">
+					<caption>
+						<p>This table shows the number of alerts for each level of risk and confidence included in the report.</p>
+						<p>(The percentages in brackets represent the count as a percentage of the total number of alerts included in the report, rounded to one decimal place.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%">
+						<col style="width: 14.0%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup"
+								colspan="5">Confidence</th>
+						</tr>
+						<tr>
+							<th scope="col">User Confirmed</th>
+							<th scope="col">High</th>
+							<th scope="col">Medium</th>
+							<th scope="col">Low</th>
+							<th scope="col">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="5">Risk</th>
+							<th scope="row">High</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(7.7%)</span></td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(7.7%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Medium</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(7.7%)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(23.1%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(30.8%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Low</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(15.4%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(7.7%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(7.7%)</span></td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(30.8%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Informational</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(15.4%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(15.4%)</span></td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(30.8%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row">Total</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(23.1%)</span></td>
+							<td><span>6</span><br> <span
+								class="additional-info-percentages">(46.2%)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(30.8%)</span></td>
+							<td><span>13</span><br> <span
+								class="additional-info-percentages">(100%)</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="site-risk-counts">
+				<h3>Alert counts by site and risk</h3>
+				<table class="site-risk-counts-table">
+					<caption>
+						<p>This table shows, for each site for which one or more alerts were raised, the number of alerts raised at each risk level.</p>
+						<p>Alerts with a confidence level of &quot;False Positive&quot; have been excluded from these counts.</p>
+						<p>(The numbers in brackets are the number of alerts raised for the site at or above that risk level.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="4">Risk</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<span>High</span><br>  <span
+									class="additional-info-percentages">(= High)</span>  
+							</th>
+							<th scope="col">
+								<span>Medium</span><br>   <span
+									class="additional-info-percentages">(&gt;= Medium)</span> 
+							</th>
+							<th scope="col">
+								<span>Low</span><br>   <span
+									class="additional-info-percentages">(&gt;= Low)</span> 
+							</th>
+							<th scope="col">
+								<span>Informational</span><br>   <span
+									class="additional-info-percentages">(&gt;= Informational)</span> 
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="5">Site</th>
+							<th scope="row">https://clientservices.googleapis.com</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							
+						</tr>
+						<tr>
+							
+							<th scope="row">https://optimizationguide-pa.googleapis.com</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							
+						</tr>
+						<tr>
+							
+							<th scope="row">https://content-autofill.googleapis.com</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(2)</span></td>
+							
+						</tr>
+						<tr>
+							
+							<th scope="row">http://127.0.0.1:3004</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							
+						</tr>
+						<tr>
+							
+							<th scope="row">http://localhost:5173</th>
+							
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(5)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(6)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(8)</span></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="alert-type-counts">
+				<h3>Alert counts by alert type</h3>
+				<table class="alert-type-counts-table">
+					<caption>
+						<p>This table shows the number of alerts of each alert type, together with the alert type&#39;s risk level.</p>
+						<p>(The percentages in brackets represent each count as a percentage, rounded to one decimal place, of the total number of alerts included in this report.)</p>
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Alert type</th>
+							<th scope="col">Risk</th>
+							<th scope="col">Count</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-0">Cloud Metadata Potentially Exposed</a></th>
+							<td class="risk-level">High</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(7.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-1">Content Security Policy (CSP) Header Not Set</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>11</span><br> <span
+								class="additional-info-percentages">(84.6%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-2">Cross-Domain Misconfiguration</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>50</span><br> <span
+								class="additional-info-percentages">(384.6%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-3">Format String Error</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>30</span><br> <span
+								class="additional-info-percentages">(230.8%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-4">Missing Anti-clickjacking Header</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>11</span><br> <span
+								class="additional-info-percentages">(84.6%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-5">Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(7.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-6">Strict-Transport-Security Header Not Set</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>15</span><br> <span
+								class="additional-info-percentages">(115.4%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-7">Timestamp Disclosure - Unix</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>5</span><br> <span
+								class="additional-info-percentages">(38.5%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-8">X-Content-Type-Options Header Missing</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>58</span><br> <span
+								class="additional-info-percentages">(446.2%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-9">Information Disclosure - Suspicious Comments</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>54</span><br> <span
+								class="additional-info-percentages">(415.4%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-10">Modern Web Application</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(30.8%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-11">Re-examine Cache-control Directives</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>11</span><br> <span
+								class="additional-info-percentages">(84.6%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-12">Session Management Response Identified</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(15.4%)</span></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="row">Total</th>
+							<td></td>
+							<td>13</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+		</section>
+
+		<section id="alerts" class="alerts">
+			<h2>Alerts</h2>
+			<ol>
+				
+				 
+				
+				
+				
+				
+				
+				
+				<li id="alerts--risk-3-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">High</span>, <span>Confidence</span>=<span
+							class="confidence-level">Low</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:5173</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-0">Cloud Metadata Potentially Exposed</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:5173/latest/meta-data/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Cloud Metadata Attack attempts to abuse a misconfigured NGINX server in order to access the instance metadata maintained by cloud service providers such as AWS, GCP and Azure.</p>
+
+<p>All of these providers provide metadata via an internal unroutable IP address &#39;169.254.169.254&#39; - this can be exposed by incorrectly configured NGINX servers and accessed by using this IP address in the Host header field.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>Based on the successful response status code cloud metadata may have been returned in the response. Check the response data to see if any cloud metadata has been returned.</p>
+
+<p>The meta data returned can include information that would allow an attacker to completely compromise the system.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (216 bytes)</summary>
+				
+				<pre><code>GET http://localhost:5173/latest/meta-data/ HTTP/1.1
+host: 169.254.169.254
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (249 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: text/html
+Cache-Control: no-cache
+Etag: W/&quot;229-yiGK1qodB+IywYkQBVKX2IquYEo&quot;
+Date: Fri, 06 Dec 2024 15:22:53 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 553
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (553 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;&quot;&gt;
+  &lt;head&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/@id/virtual:vue-devtools-path:overlay.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/@id/virtual:vue-inspector-path:load.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script type=&quot;module&quot; src=&quot;/@vite/client&quot;&gt;&lt;/script&gt;
+
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Vite App&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/src/main.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Attack</th>
+		<td><pre><code>169.254.169.254</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Do not trust any user data in NGINX configs. In this case it is probably the use of the $host variable which is set from the &#39;Host&#39; header and can be controlled by an attacker.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+				 
+				
+				
+				<li id="alerts--risk-2-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Medium</span>, <span>Confidence</span>=<span
+							class="confidence-level">High</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:5173</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-1">Content Security Policy (CSP) Header Not Set</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:5173</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (197 bytes)</summary>
+				
+				<pre><code>GET http://localhost:5173 HTTP/1.1
+host: localhost:5173
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (249 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: text/html
+Cache-Control: no-cache
+Etag: W/&quot;229-yiGK1qodB+IywYkQBVKX2IquYEo&quot;
+Date: Fri, 06 Dec 2024 15:19:22 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 553
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (553 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;&quot;&gt;
+  &lt;head&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/@id/virtual:vue-devtools-path:overlay.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/@id/virtual:vue-inspector-path:load.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script type=&quot;module&quot; src=&quot;/@vite/client&quot;&gt;&lt;/script&gt;
+
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Vite App&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/src/main.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Medium</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(3)</span>
+					</h3>
+					<ol>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:5173</span> <span>(3)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-2">Cross-Domain Misconfiguration</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:5173/favicon.ico</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control.html">OWASP_2017_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/264.html">CWE-264</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (241 bytes)</summary>
+				
+				<pre><code>GET http://localhost:5173/favicon.ico HTTP/1.1
+host: localhost:5173
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+referer: http://localhost:5173
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (286 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Length: 4286
+Content-Type: image/x-icon
+Last-Modified: Thu, 14 Nov 2024 08:13:30 GMT
+ETag: W/&quot;4286-1731572010356&quot;
+Cache-Control: no-cache
+Date: Fri, 06 Dec 2024 15:19:22 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (4286 bytes)</summary>
+				
+				<pre><code>           ¨     (       @                                                                                                                                                                                                                     ¸A ¸A ¸A ¸A                                                                                                             ¸A ¸A ¸A3¸A3¸A ¸A                                                                                                         ¸A ¸A¸A±¸A±¸A¸A                                                                                                     ¸A ¸A ¸AZ¸A÷¸A÷¸AZ¸A ¸A                                                                                                 ¸A ¸A¸AÉ¸Aÿ¸Aÿ¸AÉ¸A¸A                                                                                             ¸A ¸A ¸Az¸Aþ¸Aÿ¸Aÿ¸Aþ¸Az¸A ¸A                                                                                     ¸A ¸A ¸A.¸Aß¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aß¸A.¸A ¸A                                                                                 ¸A ¸A¸A¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸A¸A¸A                                                                             ¸A ¸A ¸AH¸Að¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Að¸AH¸A ¸A                                                                         ¸A ¸A¸A¸¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸A¸¸A¸A                                                                     ¸A ¸A ¸Af¸Aú¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aú¸Af¸A ¸A                                                                 ¸A ¸A ¸AÒ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¹Aÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸AÒ¸A ¸A                                                             ¸A ¸A¸A¸Aÿ¸Aÿ¸Aÿ¸Aÿ¹Aÿ|¤?ÿ|¤?ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸A¸A¸A                                                     ¸A ¸A ¸A7¸Aæ¸Aÿ¸Aÿ¸Aÿ¸Aÿ´Aÿjl9ÿjl9ÿ´Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aæ¸A7¸A ¸A                                                 ¸A ¸A	¸A¦¸Aÿ¸Aÿ¸Aÿ¸Aÿ¹Aÿw=ÿ_L5ÿ_L5ÿw=ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸A¦¸A	¸A                                             ¸A ¸A ¸AR¸Aô¸Aÿ¸Aÿ¸Aÿ¹Aÿ®@ÿfa8ÿ^H5ÿ^H5ÿfa8ÿ®@ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aô¸AR¸A ¸A                                         ¸A ¸A¸AÂ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¹Aÿr&lt;ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿr&lt;ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸AÂ¸A¸A                                     ¸A ¸A ¸Aq¸Aü¸Aÿ¸Aÿ¸Aÿ¹Aÿ}¦?ÿcW7ÿ^H5ÿ^I5ÿ^I5ÿ^H5ÿcW7ÿ}¦?ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aü¸Aq¸A ¸A                                 ¸A ¸A(¸AÚ¸Aÿ¸Aÿ¸Aÿ¸Aÿ·Aÿmv:ÿ^H5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^H5ÿmv:ÿ·Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸AÚ¸A(¸A                             ¸A ¸A¸A¸Aÿ¸Aÿ¸Aÿ¸Aÿ¹Aÿy&gt;ÿ`P6ÿ^H5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^H5ÿ`P6ÿy&gt;ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸A¸A¸A                     ¸A ¸A ¸A@¸Aì¸Aÿ¸Aÿ¸Aÿ¸Aÿ²@ÿii9ÿ]G5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ]G5ÿii9ÿ²@ÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aì¸A@¸A ¸A                 ¸A ¸A¸A±¸Aÿ¸Aÿ¸Aÿ¸Aÿ¹Aÿu=ÿ_K5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ_K5ÿu=ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸A±¸A¸A             ¸A ¸A ¸A]¸Aø¸Aÿ¸Aÿ¸Aÿ¹Aÿ¬@ÿe]7ÿ^H5ÿ^I5ÿ^I5ÿ^I5ÿ^J5å^J5å^I5ÿ^I5ÿ^I5ÿ^H5ÿe]7ÿ¬@ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aø¸A]¸A ¸A         ¸A ¸A¸AÌ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿp;ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ü_L5n_L5n^I5ü^I5ÿ^I5ÿ^I5ÿ^I5ÿp;ÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸AÌ¸A¸A     ¸A ¸A ¸A}¸Aþ¸Aÿ¸Aÿ¸Aÿ¹Aÿ|¢?ÿbT6ÿ^H5ÿ^I5ÿ^I5ÿ^I5ÿ_J5ÁaP6aP6_J5Á^I5ÿ^I5ÿ^I5ÿ^H5ÿbT6ÿ|¢?ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aþ¸A}¸A ¸A ¸A ¸A/¸Aá¸Aÿ¸Aÿ¸Aÿ¸AÿµAÿlq9ÿ^H5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ó_L5P^H5 ^H5 _L5P^I5ó^I5ÿ^I5ÿ^I5ÿ^H5ÿlq9ÿµAÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aá¸A/¸A ¸A¸A¸Aÿ¸Aÿ¸Aÿ¸AÿºAÿx=ÿ`N6ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ_K5¤bT7aQ6 aQ6 bT7_K5¤^I5ÿ^I5ÿ^I5ÿ^I5ÿ`N6ÿx=ÿºAÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸A¸A¸AW¸Að¸Aÿ¸Aÿ¸Aÿ¹Aÿ¯@ÿgd8ÿ^H5ÿ^I5ÿ^I5ÿ^I5ÿ^J5å`M65_K5 jf9 jf9 _K5 `M65^J5å^I5ÿ^I5ÿ^I5ÿ^H5ÿgd8ÿ¯@ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Að¸AW¸A¸AÈ¸AÆ¸AÆ¸AÆºAÆv=Æ_K5Æ^I5Æ^I5Æ^I5Æ^I5É_K5uha9bS7         bS7 ha9_K5u^I5É^I5Æ^I5Æ^I5Æ_K5Æv=ÆºAÆ¸AÆ¸AÆ¸AÆ¸AÈ¸A¸A¸A¸A¸A¸A¹Alr:\D4^I5^I5^I5^I5`M6^H5                 ^H5 `M6^I5^I5^I5^I5\D4lr9¹A¸A¸A¸A¸A¸A                                                                                                                                ÿÿÿÿÿÿÿÿÿþÿÿü?ÿÿü?ÿÿøÿÿøÿÿðÿÿàÿÿàÿÿÀÿÿÀÿÿÿÿ  ÿÿ  ÿþ  þ  ü  ?ü  ?ø  ð  ð  à  à  À  À     À  À  à ÿÿÿÿ</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Access-Control-Allow-Origin: *</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</p>
+
+<p>Configure the &quot;Access-Control-Allow-Origin&quot; HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-3">Format String Error</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:5173/node_modules/vite-plugin-vue-inspector/src/Overlay.vue?vue=ZAP%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%0A&amp;type=style&amp;index=0&amp;scoped=31d1379f&amp;lang.css=</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A1_2017-Injection.html">OWASP_2017_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A03_2021-Injection/">OWASP_2021_A03</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>A Format String error occurs when the submitted data of an input string is evaluated as a command by the application.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>Potential Format String Error. The script closed the connection on a /%s.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (885 bytes)</summary>
+				
+				<pre><code>GET http://localhost:5173/node_modules/vite-plugin-vue-inspector/src/Overlay.vue?vue=ZAP%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%0A&amp;type=style&amp;index=0&amp;scoped=31d1379f&amp;lang.css= HTTP/1.1
+host: localhost:5173
+Proxy-Connection: keep-alive
+Origin: http://localhost:5173
+sec-ch-ua-platform: &quot;Windows&quot;
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36
+sec-ch-ua: &quot;Google Chrome&quot;;v=&quot;131&quot;, &quot;Chromium&quot;;v=&quot;131&quot;, &quot;Not_A Brand&quot;;v=&quot;24&quot;
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: script
+Referer: http://localhost:5173/node_modules/vite-plugin-vue-inspector/src/Overlay.vue
+Accept-Language: sv-SE,sv;q=0.9,en-US;q=0.8,en;q=0.7
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (176 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 500 Internal Server Error
+Access-Control-Allow-Origin: *
+Date: Fri, 06 Dec 2024 15:23:07 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 2133
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (2133 bytes)</summary>
+				
+				<pre><code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+          &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot; /&gt;
+            &lt;title&gt;Error&lt;/title&gt;
+            &lt;script type=&quot;module&quot;&gt;
+              const error = {&quot;message&quot;:&quot;ENOENT: no such file or directory, open &#39;/node_modules/vite-plugin-vue-inspector/src/Overlay.vue&#39;&quot;,&quot;stack&quot;:&quot;    at Object.openSync (node:fs:601:3)\n    at Object.readFileSync (node:fs:469:35)\n    at getDescriptor (file:///C:/Users/edvin/Documents/Kod/FrontendEvaluation/Vue/node_modules/@vitejs/plugin-vue/dist/index.mjs:114:18)\n    at LoadPluginContext.load (file:///C:/Users/edvin/Documents/Kod/FrontendEvaluation/Vue/node_modules/@vitejs/plugin-vue/dist/index.mjs:2960:28)\n    at file:///C:/Users/edvin/Documents/Kod/FrontendEvaluation/Vue/node_modules/vite-plugin-inspect/dist/index.mjs:431:26\n    at plugin.\u003ccomputed&gt; (file:///C:/Users/edvin/Documents/Kod/FrontendEvaluation/Vue/node_modules/vite-plugin-inspect/dist/index.mjs:388:14)\n    at PluginContainer.load (file:///C:/Users/edvin/Documents/Kod/FrontendEvaluation/Vue/node_modules/vite/dist/node/chunks/dep-CB_7IfJ-.js:49064:17)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async loadAndTransform (file:///C:/Users/edvin/Documents/Kod/FrontendEvaluation/Vue/node_modules/vite/dist/node/chunks/dep-CB_7IfJ-.js:51869:22)&quot;,&quot;frame&quot;:&quot;&quot;}
+              try {
+                const { ErrorOverlay } = await import(&quot;/@vite/client&quot;)
+                document.body.appendChild(new ErrorOverlay(error))
+              } catch {
+                const h = (tag, text) =&gt; {
+                  const el = document.createElement(tag)
+                  el.textContent = text
+                  return el
+                }
+                document.body.appendChild(h(&#39;h1&#39;, &#39;Internal Server Error&#39;))
+                document.body.appendChild(h(&#39;h2&#39;, error.message))
+                document.body.appendChild(h(&#39;pre&#39;, error.stack))
+                document.body.appendChild(h(&#39;p&#39;, &#39;(Error overlay failed to load)&#39;))
+              }
+            &lt;/script&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>vue</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Attack</th>
+		<td><pre><code>ZAP%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s
+</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Rewrite the background program using proper deletion of bad character strings. This will require a recompile of the background executable.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-4">Missing Anti-clickjacking Header</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:5173</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">WSTG-v42-CLNT-09</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/1021.html">CWE-1021</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The response does not protect against &#39;ClickJacking&#39; attacks. It should include either Content-Security-Policy with &#39;frame-ancestors&#39; directive or X-Frame-Options.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (197 bytes)</summary>
+				
+				<pre><code>GET http://localhost:5173 HTTP/1.1
+host: localhost:5173
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (249 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: text/html
+Cache-Control: no-cache
+Etag: W/&quot;229-yiGK1qodB+IywYkQBVKX2IquYEo&quot;
+Date: Fri, 06 Dec 2024 15:19:22 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 553
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (553 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;&quot;&gt;
+  &lt;head&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/@id/virtual:vue-devtools-path:overlay.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/@id/virtual:vue-inspector-path:load.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script type=&quot;module&quot; src=&quot;/@vite/client&quot;&gt;&lt;/script&gt;
+
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Vite App&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/src/main.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-frame-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p>
+
+<p>If you expect the page to be framed only by pages on your server (e.g. it&#39;s part of a FRAMESET) then you&#39;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&#39;s &quot;frame-ancestors&quot; directive.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				<li id="alerts--risk-1-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Low</span>, <span>Confidence</span>=<span
+							class="confidence-level">High</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://clientservices.googleapis.com</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-5">Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">POST https://clientservices.googleapis.com/uma/v2</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server">WSTG-v42-INFO-02</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/200.html">CWE-200</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The web/application server is leaking version information via the &quot;Server&quot; HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (581 bytes)</summary>
+				
+				<pre><code>POST https://clientservices.googleapis.com/uma/v2 HTTP/1.1
+host: clientservices.googleapis.com
+Connection: keep-alive
+Content-Length: 2276
+X-Chrome-UMA-Log-SHA1: EB24A4E688BD97535CE5EEF358A97BC2F9240C9C
+X-Chrome-UMA-Log-HMAC-SHA256: mPaMr2YTZx9kVHY99KqiIgK3NafD1Ve+ZMgo8bajxL8=
+X-Chrome-UMA-ReportingInfo: CAE=
+content-encoding: gzip
+Content-Type: application/vnd.chrome.uma
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: empty
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+
+</code></pre>
+				
+				
+			</details> <details class="request-body">
+				<summary>Request body (2276 bytes)</summary>
+				
+				<pre><code>§ê¸º131.0.6778.109-64&quot;sv*
+
+Windows NT
+10.0.226312(
+x86_64¿7óÕÿ&quot;
+NBLK-WAX9Xªx86_64PbCHBF²°d9Ò7â­~~È°lØÀ-±îj-Tòcw}yKªiçl5boÙAaûðpèÚSç9Ý¢-¼cëmÝq!÷Ïh3èW6«b¢)¸ÿLó]d9Ò7â­~~È°lØÀ-±îj-Tòcw}yKªiçl5boÙAaûðpèÚSç9Ý¢-¼cëmÝq!÷Ïh3èW6«b¢)¸ÿLó]ñavGËüå^ºl
+M	sÛ7&quot;T,.ììÖ¨\½¾	fE !ã¤	ø±£;Ïü¥ÞÞ¿ï	ñ¯fVöö )Í½ÊM*H
+£	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆîZ	ø±£;Ïü¥ÞÞ¿ï	CÁp»â 	Zýk6&lt;%ÒâÜ	&amp;L$RD]¸ÔÅÎ¦	¯Zðßÿÿÿÿÿÿÿÿÿ	c`nÖ`=|Ò	jæ¬TF2ª )Í½ÊM*H
+	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»â 	Zýk6&lt;%Òýr	&amp;L$RD]¸Ôìï¯´è	¯ZðßÅÎ¦	c`nÖ`=|Ò	jæ¬TF2× )Í½ÊM*H
+¨	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»â 	Zýk6&lt;%ÒÂ«Îýÿÿÿÿ	&amp;L$RD]¸ÔªðÏ¾úÃþÿ	¯ZðßÅÎ¦	c`nÖ`=|Ò	jæ¬TF2¸ )Í½ÊM*H
+¥	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»â 	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸ÔèÝ¬Õ	¯ZðßÅÎ¦	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+§	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»â 	Zýk6&lt;%Ò²ê³ÿÿÿÿÿ	&amp;L$RD]¸Ôà¶ÌÞÿçf	¯Zðßÿÿÿÿÿÿÿÿÿ	c`nÖ`=|Ò	jæ¬TF2ª )Í½ÊM*H
+¡	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»â 	Zýk6&lt;%ÒÄÎ	&amp;L$RD]¸ÔïÈ±°Ñþÿ	¯Zðßà¶ÌÞÿçf	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+¦	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»â 	Zýk6&lt;%Òè¢ÍÅùÿÿÿÿ	&amp;L$RD]¸ÔÄóíÞÒÑýÿ	¯Zðßà¶ÌÞÿçf	c`nÖ`=|ÒB	jæ¬TF2G )Í½ÊM*H
+¦	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»â 	Zýk6&lt;%Òâéøÿÿÿÿ	&amp;L$RD]¸ÔððÑºòäýÿ	¯Zðßà¶ÌÞÿçf	c`nÖ`=|ÒB	jæ¬TF2B )Í½ÊM*H
+¤	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»â 	Zýk6&lt;%Ò¼Ã·ýÿÿÿÿ	&amp;L$RD]¸ÔÆÇ¥ÏðÀ	¯Zðßà¶ÌÞÿçf	c`nÖ`=|ÒB	jæ¬TF2A )Í½ÊM*H
+¤	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»â 	Zýk6&lt;%ÒÁ¥ øÿÿÿÿ	&amp;L$RD]¸ÔøøÅÞÉ«Î	¯Zðßà¶ÌÞÿçf	c`nÖ`=|ÒB	jæ¬TF2E )Í½ÊM*H
+¡	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»â 	Zýk6&lt;%ÒÈ	&amp;L$RD]¸ÔÎ¥Â÷¬ýÿ	¯Zðßà¶ÌÞÿçf	c`nÖ`=|ÒB	jæ¬TF2Z )Í½ÊM*H
+¦	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»â 	Zýk6&lt;%ÒÂö ñÿÿÿÿÿ	&amp;L$RD]¸ÔçÔë¼«ÿÿ	¯Zðßà¶ÌÞÿçf	c`nÖ`=|ÒB	jæ¬TF2D )Í½ÊM*H
+¥	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%ÒçìÓúÿÿÿÿ	&amp;L$RD]¸ÔÐÄ¾	¯Zðßà¶ÌÞÿçf	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+¢	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%ÒÞñê£	&amp;L$RD]¸ÔªØÖ¯Âùÿ	¯Zðßà¶ÌÞÿçf	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òºòá	&amp;L$RD]¸Ô²è8	¯Zðßà¶ÌÞÿçf	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+§	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸Ôäæð»Üþÿ	¯Zðßà¶ÌÞÿçf	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+¬	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî 	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òè¢ÍÅùÿÿÿÿ	&amp;L$RD]¸ÔÈ´¸Ø£ÿÿ	¯Zðßÿÿÿÿÿÿÿÿÿ	c`nÖ`=|Ò0	jæ¬TF2ª )Í½ÊM*H
+	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òòt	&amp;L$RD]¸ÔÿÍ»Û	¯Zðßà¶ÌÞÿçf	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+¢	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Ò¾íï	&amp;L$RD]¸ÔÓã§ÄÞýÿ	¯Zðßà¶ÌÞÿçf	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+¢	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%ÒúÖ	&amp;L$RD]¸ÔÌÍõÁñq	¯ZðßÈ´¸Ø£ÿÿ	c`nÖ`=|Ò	jæ¬TF2ª )Í½ÊM*H
+«	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸ÔñÑåòÆÅüÿ	¯ZðßÈ´¸Ø£ÿÿ	c`nÖ`=|Ò&gt;	jæ¬TF2ª )Í½ÊM*H
+	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Ò¿Å¡y	&amp;L$RD]¸ÔíÅëß	¯ZðßÌÍõÁñq	c`nÖ`=|ÒB	jæ¬TF22 )Í½ÊM*H
+¢	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%ÒÎô¾¿	&amp;L$RD]¸Ôýø¢áÅÑøÿ	¯ZðßÌÍõÁñq	c`nÖ`=|ÒB	jæ¬TF2L )Í½ÊM*H
+¢	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%ÒÑ	&amp;L$RD]¸Ô¼¶¤ÖÜ¡ùÿ	¯ZðßÌÍõÁñq	c`nÖ`=|ÒB	jæ¬TF27 )Í½ÊM*H
+¤	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%ÒÕòûÿÿÿÿ	&amp;L$RD]¸Ôëû½ÙãÅ/	¯ZðßÌÍõÁñq	c`nÖ`=|ÒB	jæ¬TF2b )Í½ÊM*H
+§	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%ÒÐÑ©Ïùÿÿÿÿ	&amp;L$RD]¸Ôô¥ýÒ÷Ëÿÿ	¯ZðßÌÍõÁñq	c`nÖ`=|ÒB	jæ¬TF2r )Í½ÊM*H
+ 	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Ò¼ÝùÚ	&amp;L$RD]¸Ôç¡Á¬îç	¯ZðßÌÍõÁñq	c`nÖ`=|ÒB	jæ¬TF2I )Í½ÊM*H
+¢	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%ÒßÒÝ	&amp;L$RD]¸Ôè§ËÂáùÿ	¯ZðßÌÍõÁñq	c`nÖ`=|ÒB	jæ¬TF2T )Í½ÊM*H
+¬	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òè¢ÍÅùÿÿÿÿ	&amp;L$RD]¸ÔÊîËÅþÿ	¯ZðßÈ´¸Ø£ÿÿ	c`nÖ`=|Ò	jæ¬TF2ª )Í½ÊM*H
+©	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸Ôõú·ÕßÜ	¯ZðßÊîËÅþÿ	c`nÖ`=|Ò	jæ¬TF2ª )Í½ÊM*H
+©	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆîB	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸Ô¯¾ÑÏþÕ	¯ZðßÊîËÅþÿ	c`nÖ`=|Ò	jæ¬TF2ª )Í½ÊM*H
+©	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸ÔÂ¹¶ÅÚÖµ	¯ZðßÊîËÅþÿ	c`nÖ`=|Ò	jæ¬TF2¨ )Í½ÊM*H
+«	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸ÔßÄ¤×´ùÿ	¯ZðßÊîËÅþÿ	c`nÖ`=|Ò	jæ¬TF2¨ )Í½ÊM*H
+«	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸Ô´Í¥üÔ®üÿ	¯ZðßÊîËÅþÿ	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+ª	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸ÔçïÍòªÒþÿ	¯ZðßñÑåòÆÅüÿ	c`nÖ`=|Ò.	jæ¬TF2 )Í½ÊM*H
+ª	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸ÔÇéèò¡¤Øøÿ	¯ZðßñÑåòÆÅüÿ	c`nÖ`=|Ò.	jæ¬TF2 )Í½ÊM*H
+«	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸Ô´É¡Þ¡þÿ	¯ZðßÊîËÅþÿ	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+©	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸Ô¹ó¹Æ­ü	¯ZðßÊîËÅþÿ	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+«	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî&quot;	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸ÔÜúÂÎÃÂ£øÿ	¯ZðßÊîËÅþÿ	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+©	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸Ôê­û	¯ZðßÊîËÅþÿ	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+©	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî&quot;	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸ÔÖí¬«ñ°	¯ZðßÊîËÅþÿ	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+©	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸ÔÈ½Óµ¾	¯ZðßÊîËÅþÿ	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+¦	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî©	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Ò¿Å¡y	&amp;L$RD]¸Ôä©ó¥¸øÿ	¯ZðßÈ´¸Ø£ÿÿ	c`nÖ`=|ÒH	jæ¬TF2ª )Í½ÊM*H
+ 	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%ÒÂ»²Õ	&amp;L$RD]¸ÔÚ´Ë¹ N	¯Zðß¯¾ÑÏþÕ	c`nÖ`=|Ò	jæ¬TF2* )Í½ÊM*H
+	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%ÒÕ«Ê7	&amp;L$RD]¸ÔÂøÞð	¯Zðß¯¾ÑÏþÕ	c`nÖ`=|Ò5	jæ¬TF2 )Í½ÊM*H
+¦	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Ò¬âðýÿÿÿÿ	&amp;L$RD]¸ÔÛÅ¤ù¢«	¯Zðß¯¾ÑÏþÕ	c`nÖ`=|Ò5	jæ¬TF2 )Í½ÊM*H
+¢	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî?	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òû°ç	&amp;L$RD]¸ÔÎþäöÌø	¯Zðß¯¾ÑÏþÕ	c`nÖ`=|Ò5	jæ¬TF2 )Í½ÊM*H
+	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%ÒÕ«Ê7	&amp;L$RD]¸ÔÖ÷¡=	¯ZðßÂ¹¶ÅÚÖµ	c`nÖ`=|Ò5	jæ¬TF2 )Í½ÊM*H
+¡	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî
+	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÕ	Zýk6&lt;%Òà»	&amp;L$RD]¸Ô÷ÖØï¢¦	¯ZðßÂ¹¶ÅÚÖµ	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+¢	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%ÒÕ«Ê7	&amp;L$RD]¸Ô¶Ãºß	¯ZðßßÄ¤×´ùÿ	c`nÖ`=|Ò5	jæ¬TF2 )Í½ÊM*H
+¢	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%ÒÕ«Ê7	&amp;L$RD]¸Ô§Æÿªí	¯Zðß´É¡Þ¡þÿ	c`nÖ`=|Ò5	jæ¬TF2 )Í½ÊM*H
+¨	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Ò¬âðýÿÿÿÿ	&amp;L$RD]¸Ô¾äãÑà½	¯Zðß´É¡Þ¡þÿ	c`nÖ`=|Ò5	jæ¬TF25 )Í½ÊM*H
+¨	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Ò¬âðýÿÿÿÿ	&amp;L$RD]¸Ôöï°ýù	¯Zðß´É¡Þ¡þÿ	c`nÖ`=|Ò5	jæ¬TF2B )Í½ÊM*H
+£	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî
+	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Òà»	&amp;L$RD]¸Ô¼¹ºäÿ	¯Zðß´É¡Þ¡þÿ	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+¢	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%ÒÕ«Ê7	&amp;L$RD]¸ÔÐ«ÞÍÿüÿ	¯Zðß¹ó¹Æ­ü	c`nÖ`=|Ò5	jæ¬TF2( )Í½ÊM*H
+¨	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Ò¬âðýÿÿÿÿ	&amp;L$RD]¸Ô¯È¼þÿ	¯Zðß¹ó¹Æ­ü	c`nÖ`=|Ò5	jæ¬TF2V )Í½ÊM*H
+¨	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Ò¬âðýÿÿÿÿ	&amp;L$RD]¸ÔóªäÐ«øÿ	¯Zðß¹ó¹Æ­ü	c`nÖ`=|Ò5	jæ¬TF2w )Í½ÊM*H
+¢	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%ÒÕ«Ê7	&amp;L$RD]¸Ô¢ùòÛ	¯ZðßÜúÂÎÃÂ£øÿ	c`nÖ`=|Ò5	jæ¬TF2( )Í½ÊM*H
+«	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Ò¬âðýÿÿÿÿ	&amp;L$RD]¸Ôâéþÿ	¯ZðßÜúÂÎÃÂ£øÿ	c`nÖ`=|Ò5	jæ¬TF2 )Í½ÊM*H
+ª	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Ò¬âðýÿÿÿÿ	&amp;L$RD]¸Ô¿÷Ü¾»ÿÿ	¯ZðßÜúÂÎÃÂ£øÿ	c`nÖ`=|Ò5	jæ¬TF2V )Í½ÊM*H
+¢	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%ÒÕ«Ê7	&amp;L$RD]¸Ô£õ¿ßó¸þÿ	¯Zðßê­û	c`nÖ`=|Ò5	jæ¬TF2 )Í½ÊM*H
+©	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Ò¬âðýÿÿÿÿ	&amp;L$RD]¸Ôö¬ÖÖë¼þÿ	¯Zðßê­û	c`nÖ`=|Ò5	jæ¬TF2¹ )Í½ÊM*H
+¨	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Ò¬âðýÿÿÿÿ	&amp;L$RD]¸ÔÓ¢ºÄÞùÿ	¯Zðßê­û	c`nÖ`=|Ò5	jæ¬TF2B )Í½ÊM*H
+¡	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî
+	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Òà»	&amp;L$RD]¸Ô±ÅÉ«þÅ	¯Zðßê­û	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+ 	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%ÒÕ«Ê7	&amp;L$RD]¸Ô¹´¸Î	¯ZðßÖí¬«ñ°	c`nÖ`=|Ò5	jæ¬TF2 )Í½ÊM*H
+©	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Ò¬âðýÿÿÿÿ	&amp;L$RD]¸Ôì±ôÌ¬þÿ	¯ZðßÖí¬«ñ°	c`nÖ`=|Ò5	jæ¬TF2Í )Í½ÊM*H
+©	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Ò¬âðýÿÿÿÿ	&amp;L$RD]¸Ô°ÞáÅÆÿÿ	¯ZðßÖí¬«ñ°	c`nÖ`=|Ò5	jæ¬TF2Æ )Í½ÊM*H
+§	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Ò¬âðýÿÿÿÿ	&amp;L$RD]¸Ô÷ðú	¯ZðßÖí¬«ñ°	c`nÖ`=|Ò5	jæ¬TF2ï )Í½ÊM*H
+¡	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî
+	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Òà»	&amp;L$RD]¸ÔÑïª¶Ã÷¾	¯ZðßÖí¬«ñ°	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+£	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%ÒçÃ	&amp;L$RD]¸Ôß·¡îÌ	¯ZðßóªäÐ«øÿ	c`nÖ`=|Ò,	jæ¬TF2O )Í½ÊM*H
+£	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%ÒçÃ	&amp;L$RD]¸Ô­É§î1	¯Zðßâéþÿ	c`nÖ`=|Ò,	jæ¬TF2 )Í½ÊM*H
+ª	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%ÒÄÆÖØþÿÿÿÿ	&amp;L$RD]¸Ô÷Ô¦úîýÿ	¯Zðßä©ó¥¸øÿ	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+ª	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Ò£í½ÿÿÿÿÿ	&amp;L$RD]¸Ô²ñ¨õúÿ	¯Zðßä©ó¥¸øÿ	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+¨	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Òñëøÿÿÿÿ	&amp;L$RD]¸ÔåÀûõ	¯Zðßä©ó¥¸øÿ	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+¦	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%ÒËèª®	&amp;L$RD]¸Ô½É¿¬ÓÂùÿ	¯Zðßä©ó¥¸øÿ	c`nÖ`=|Ò	jæ¬TF2 )Í½ÊM*H
+¥	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî 	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸Ô×îÀÃ½w	¯Zðß¯¾ÑÏþÕ	c`nÖ`=|Ò	jæ¬TF2  )Í½ÊM*H
+¥	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî 	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸ÔèÁè¡Ì½w	¯ZðßÂ¹¶ÅÚÖµ	c`nÖ`=|Ò	jæ¬TF2  )Í½ÊM*H
+¨	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî 	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸ÔÎÜ¬üëÔ×	¯ZðßßÄ¤×´ùÿ	c`nÖ`=|Ò	jæ¬TF2  )Í½ÊM*H
+¨	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî 	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸Ô¨¹®ÙÏ	¯Zðß´É¡Þ¡þÿ	c`nÖ`=|Ò	jæ¬TF2  )Í½ÊM*H
+¦	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî 	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸Ôé¦¦¹Æ¸	¯Zðßê­û	c`nÖ`=|Ò	jæ¬TF2  )Í½ÊM*H
+¦	sÛ7&quot;T,.£Zÿ¼ 	=	ß3½½ÄÆî 	ø±£;Ïü¥ÞÞ¿ï	CÁp»âÖ	Zýk6&lt;%Òÿÿÿÿÿÿÿÿÿ	&amp;L$RD]¸Ôå§ìÙÏä	¯ZðßÖí¬«ñ°	c`nÖ`=|Ò	jæ¬TF2  )Í½ÊM*H
+q	sÛ7&quot;T,.èw8þ&lt;à7 	ß3½½ÄÆî 	ø±£;Ïü¥ÞÞ¿ï	CÁp»â¨		&amp;L$RD]¸ÔÈ´¸Ø£ÿÿ	jæ¬TF2  )Í½ÊM*H</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (698 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Content-Type: text/plain; charset=UTF-8
+Content-Security-Policy-Report-Only: script-src &#39;none&#39;; form-action &#39;none&#39;; frame-src &#39;none&#39;; report-uri https://csp.withgoogle.com/csp/scaffolding/asuacrsguc:50:0
+Cross-Origin-Opener-Policy-Report-Only: same-origin; report-to=coop_reporting
+Report-To: {&quot;group&quot;:&quot;coop_reporting&quot;,&quot;max_age&quot;:2592000,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://csp.withgoogle.com/csp/report-to/scaffolding/asuacrsguc:50:0&quot;}],}
+Date: Fri, 06 Dec 2024 15:33:40 GMT
+Server: scaffolding on HTTPServer2
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3=&quot;:443&quot;; ma=2592000,h3-29=&quot;:443&quot;; ma=2592000
+Accept-Ranges: none
+Vary: Accept-Encoding
+content-length: 2
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (2 bytes)</summary>
+				
+				<pre><code>OK</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>scaffolding on HTTPServer2</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress the &quot;Server&quot; header or provide generic details.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+						
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://content-autofill.googleapis.com</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-6">Strict-Transport-Security Header Not Set</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTMxLjAuNjc3OC4xMDkSGQnJi3XGkzNlbBIFDZFhlU4hanPgDker4tU=?alt=proto</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/319.html">CWE-319</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (584 bytes)</summary>
+				
+				<pre><code>GET https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTMxLjAuNjc3OC4xMDkSGQnJi3XGkzNlbBIFDZFhlU4hanPgDker4tU=?alt=proto HTTP/1.1
+host: content-autofill.googleapis.com
+Connection: keep-alive
+X-Goog-Encode-Response-If-Executable: base64
+X-Goog-Api-Key: AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw
+X-Client-Data: CKuWywE=
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: empty
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+Accept-Language: sv-SE,sv;q=0.9,en-US;q=0.8,en;q=0.7
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (460 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Cache-Control: private,max-age=604800
+Content-Type: text/plain
+X-Goog-Safety-Encoding: base64
+X-Goog-Safety-Content-Type: application/x-protobuf
+Vary: X-Origin
+Vary: Referer
+Date: Fri, 06 Dec 2024 15:32:47 GMT
+Server: ESF
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3=&quot;:443&quot;; ma=2592000,h3-29=&quot;:443&quot;; ma=2592000
+Accept-Ranges: none
+Vary: Origin,Accept-Encoding
+content-length: 16
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (16 bytes)</summary>
+				
+				<pre><code>CgkKBw2RYZVOGgA=</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+						
+						
+						
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-1-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Low</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:5173</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-8">X-Content-Type-Options Header Missing</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:5173/favicon.ico</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &#39;nosniff&#39;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p>
+
+<p>At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (241 bytes)</summary>
+				
+				<pre><code>GET http://localhost:5173/favicon.ico HTTP/1.1
+host: localhost:5173
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+referer: http://localhost:5173
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (286 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Length: 4286
+Content-Type: image/x-icon
+Last-Modified: Thu, 14 Nov 2024 08:13:30 GMT
+ETag: W/&quot;4286-1731572010356&quot;
+Cache-Control: no-cache
+Date: Fri, 06 Dec 2024 15:19:22 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (4286 bytes)</summary>
+				
+				<pre><code>           ¨     (       @                                                                                                                                                                                                                     ¸A ¸A ¸A ¸A                                                                                                             ¸A ¸A ¸A3¸A3¸A ¸A                                                                                                         ¸A ¸A¸A±¸A±¸A¸A                                                                                                     ¸A ¸A ¸AZ¸A÷¸A÷¸AZ¸A ¸A                                                                                                 ¸A ¸A¸AÉ¸Aÿ¸Aÿ¸AÉ¸A¸A                                                                                             ¸A ¸A ¸Az¸Aþ¸Aÿ¸Aÿ¸Aþ¸Az¸A ¸A                                                                                     ¸A ¸A ¸A.¸Aß¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aß¸A.¸A ¸A                                                                                 ¸A ¸A¸A¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸A¸A¸A                                                                             ¸A ¸A ¸AH¸Að¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Að¸AH¸A ¸A                                                                         ¸A ¸A¸A¸¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸A¸¸A¸A                                                                     ¸A ¸A ¸Af¸Aú¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aú¸Af¸A ¸A                                                                 ¸A ¸A ¸AÒ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¹Aÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸AÒ¸A ¸A                                                             ¸A ¸A¸A¸Aÿ¸Aÿ¸Aÿ¸Aÿ¹Aÿ|¤?ÿ|¤?ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸A¸A¸A                                                     ¸A ¸A ¸A7¸Aæ¸Aÿ¸Aÿ¸Aÿ¸Aÿ´Aÿjl9ÿjl9ÿ´Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aæ¸A7¸A ¸A                                                 ¸A ¸A	¸A¦¸Aÿ¸Aÿ¸Aÿ¸Aÿ¹Aÿw=ÿ_L5ÿ_L5ÿw=ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸A¦¸A	¸A                                             ¸A ¸A ¸AR¸Aô¸Aÿ¸Aÿ¸Aÿ¹Aÿ®@ÿfa8ÿ^H5ÿ^H5ÿfa8ÿ®@ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aô¸AR¸A ¸A                                         ¸A ¸A¸AÂ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¹Aÿr&lt;ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿr&lt;ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸AÂ¸A¸A                                     ¸A ¸A ¸Aq¸Aü¸Aÿ¸Aÿ¸Aÿ¹Aÿ}¦?ÿcW7ÿ^H5ÿ^I5ÿ^I5ÿ^H5ÿcW7ÿ}¦?ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aü¸Aq¸A ¸A                                 ¸A ¸A(¸AÚ¸Aÿ¸Aÿ¸Aÿ¸Aÿ·Aÿmv:ÿ^H5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^H5ÿmv:ÿ·Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸AÚ¸A(¸A                             ¸A ¸A¸A¸Aÿ¸Aÿ¸Aÿ¸Aÿ¹Aÿy&gt;ÿ`P6ÿ^H5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^H5ÿ`P6ÿy&gt;ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸A¸A¸A                     ¸A ¸A ¸A@¸Aì¸Aÿ¸Aÿ¸Aÿ¸Aÿ²@ÿii9ÿ]G5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ]G5ÿii9ÿ²@ÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aì¸A@¸A ¸A                 ¸A ¸A¸A±¸Aÿ¸Aÿ¸Aÿ¸Aÿ¹Aÿu=ÿ_K5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ_K5ÿu=ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸A±¸A¸A             ¸A ¸A ¸A]¸Aø¸Aÿ¸Aÿ¸Aÿ¹Aÿ¬@ÿe]7ÿ^H5ÿ^I5ÿ^I5ÿ^I5ÿ^J5å^J5å^I5ÿ^I5ÿ^I5ÿ^H5ÿe]7ÿ¬@ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aø¸A]¸A ¸A         ¸A ¸A¸AÌ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿp;ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ü_L5n_L5n^I5ü^I5ÿ^I5ÿ^I5ÿ^I5ÿp;ÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸AÌ¸A¸A     ¸A ¸A ¸A}¸Aþ¸Aÿ¸Aÿ¸Aÿ¹Aÿ|¢?ÿbT6ÿ^H5ÿ^I5ÿ^I5ÿ^I5ÿ_J5ÁaP6aP6_J5Á^I5ÿ^I5ÿ^I5ÿ^H5ÿbT6ÿ|¢?ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aþ¸A}¸A ¸A ¸A ¸A/¸Aá¸Aÿ¸Aÿ¸Aÿ¸AÿµAÿlq9ÿ^H5ÿ^I5ÿ^I5ÿ^I5ÿ^I5ó_L5P^H5 ^H5 _L5P^I5ó^I5ÿ^I5ÿ^I5ÿ^H5ÿlq9ÿµAÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸Aá¸A/¸A ¸A¸A¸Aÿ¸Aÿ¸Aÿ¸AÿºAÿx=ÿ`N6ÿ^I5ÿ^I5ÿ^I5ÿ^I5ÿ_K5¤bT7aQ6 aQ6 bT7_K5¤^I5ÿ^I5ÿ^I5ÿ^I5ÿ`N6ÿx=ÿºAÿ¸Aÿ¸Aÿ¸Aÿ¸Aÿ¸A¸A¸AW¸Að¸Aÿ¸Aÿ¸Aÿ¹Aÿ¯@ÿgd8ÿ^H5ÿ^I5ÿ^I5ÿ^I5ÿ^J5å`M65_K5 jf9 jf9 _K5 `M65^J5å^I5ÿ^I5ÿ^I5ÿ^H5ÿgd8ÿ¯@ÿ¹Aÿ¸Aÿ¸Aÿ¸Aÿ¸Að¸AW¸A¸AÈ¸AÆ¸AÆ¸AÆºAÆv=Æ_K5Æ^I5Æ^I5Æ^I5Æ^I5É_K5uha9bS7         bS7 ha9_K5u^I5É^I5Æ^I5Æ^I5Æ_K5Æv=ÆºAÆ¸AÆ¸AÆ¸AÆ¸AÈ¸A¸A¸A¸A¸A¸A¹Alr:\D4^I5^I5^I5^I5`M6^H5                 ^H5 `M6^I5^I5^I5^I5\D4lr9¹A¸A¸A¸A¸A¸A                                                                                                                                ÿÿÿÿÿÿÿÿÿþÿÿü?ÿÿü?ÿÿøÿÿøÿÿðÿÿàÿÿàÿÿÀÿÿÀÿÿÿÿ  ÿÿ  ÿþ  þ  ü  ?ü  ?ø  ð  ð  à  à  À  À     À  À  à ÿÿÿÿ</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-content-type-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &#39;nosniff&#39; for all web pages.</p>
+
+<p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-1-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Low</span>, <span>Confidence</span>=<span
+							class="confidence-level">Low</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://optimizationguide-pa.googleapis.com</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-7">Timestamp Disclosure - Unix</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">POST https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html">OWASP_2017_A03</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/200.html">CWE-200</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>A timestamp was disclosed by the application/web server. - Unix</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>1679317318, which evaluates to: 2023-03-20 14:01:58.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (518 bytes)</summary>
+				
+				<pre><code>POST https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw HTTP/1.1
+host: optimizationguide-pa.googleapis.com
+Connection: keep-alive
+Content-Length: 877
+Content-Type: application/x-protobuf
+X-Client-Data: CKuWywE=
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: empty
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+Accept-Language: sv-SE,sv;q=0.9,en-US;q=0.8,en;q=0.7
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (877 bytes)</summary>
+				
+				<pre><code>
+ 
+	 
+e 2_
+Wtype.googleapis.com/google.internal.chrome.optimizationguide.v1.PageTopicsModelMetadata0
+g 2a
+Ytype.googleapis.com/google.internal.chrome.optimizationguide.v1.SegmentationModelMetadataJ
+ 
+g 2a
+Ytype.googleapis.com/google.internal.chrome.optimizationguide.v1.SegmentationModelMetadataJ
+g 2a
+Ytype.googleapis.com/google.internal.chrome.optimizationguide.v1.SegmentationModelMetadataJ
+ 
+l 2f
+`type.googleapis.com/google.internal.chrome.optimizationguide.v1.AutocompleteScoringModelMetadata
+g 2a
+Ytype.googleapis.com/google.internal.chrome.optimizationguide.v1.SegmentationModelMetadataJ
+g- 2a
+Ytype.googleapis.com/google.internal.chrome.optimizationguide.v1.SegmentationModelMetadataJ
+g. 2a
+Ytype.googleapis.com/google.internal.chrome.optimizationguide.v1.SegmentationModelMetadataJ*sv2</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (384 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Content-Type: application/x-protobuf
+Content-Disposition: attachment
+Vary: X-Origin
+Vary: Referer
+Date: Fri, 06 Dec 2024 15:32:50 GMT
+Server: ESF
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3=&quot;:443&quot;; ma=2592000,h3-29=&quot;:443&quot;; ma=2592000
+Accept-Ranges: none
+Vary: Origin,Accept-Encoding
+content-length: 8938
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (8938 bytes)</summary>
+				
+				<pre><code>
+
+Æ²á &quot;HR u*shttps://optimizationguide-pa.googleapis.com/downloads?name=1679317318&amp;target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION
+»
+®	ÚÐþ¸&quot;2
+dtype.googleapis.com/google.privacy.webpermissionpredictions.v1.WebPermissionPredictionsModelMetadata-
+	
+ %ÍÌL&gt;*  &gt;   ?  @?%)\O?BH R *https://optimizationguide-pa.googleapis.com/downloads?name=1730127962&amp;target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS
+
+¨&quot;2u
+Wtype.googleapis.com/google.internal.chrome.optimizationguide.v1.PageTopicsModelMetadata
+×#&lt;  &gt;%ÍÌL?0:
+override_list.pb.gz:
+VERSION.txtHR h*fhttps://optimizationguide-pa.googleapis.com/downloads?name=5&amp;target=OPTIMIZATION_TARGET_PAGE_TOPICS_V2
+º
+®¯Ðþ¸&quot;2
+dtype.googleapis.com/google.privacy.webpermissionpredictions.v1.WebPermissionPredictionsModelMetadata-
+	
+ %&gt;*  &gt;   ?
+×#?%33s?BH R *https://optimizationguide-pa.googleapis.com/downloads?name=1730127919&amp;target=OPTIMIZATION_TARGET_GEOLOCATION_PERMISSION_PREDICTIONS
+
+ñò¹&quot;
+2e
+_type.googleapis.com/google.internal.chrome.optimizationguide.v1.ClientSidePhishingModelMetadata:
+visual_model_desktop.tfliteBH R w*uhttps://optimizationguide-pa.googleapis.com/downloads?name=1730214257&amp;target=OPTIMIZATION_TARGET_CLIENT_SIDE_PHISHING
+×
+ÜÁüë¨&quot;2Å
+`type.googleapis.com/google.internal.chrome.optimizationguide.v1.AutocompleteScoringModelMetadataa
+    5   A
+    
+    5   A
+  °A%    5  °A
+    5   A
+  pB%    5  pBB¤âR v*thttps://optimizationguide-pa.googleapis.com/downloads?name=1696267841&amp;target=OPTIMIZATION_TARGET_OMNIBOX_URL_SCORING
+Ô8
+Ê7-âÀå&quot;2²7
+Ytype.googleapis.com/google.internal.chrome.optimizationguide.v1.SegmentationModelMetadataÔ6 (0R*field_form_control_typeR*total_field_countR*multiline_field_countR*time_spent_on_pageRãà
+«WITH event_ids AS (SELECT DISTINCT event_id FROM metrics WHERE metrics.metric_hash = &#39;CCC33F79ECE7363D&#39; AND metrics.metric_value IN (0, 14)) SELECT IFNULL(SUM(metric_value), 0) FROM metrics INNER JOIN event_ids ON metrics.event_id = event_ids.event_id WHERE metrics.metric_hash = &#39;4E7D579594EB8315&#39;;!
+¥ùÓÇÖî&#39;®§ÙòÕ¾N½ìçïÏáÌ&quot;words_writtenRãà
+«WITH event_ids AS (SELECT DISTINCT event_id FROM metrics WHERE metrics.metric_hash = &#39;CCC33F79ECE7363D&#39; AND metrics.metric_value IN (0, 14)) SELECT IFNULL(SUM(metric_value), 0) FROM metrics INNER JOIN event_ids ON metrics.event_id = event_ids.event_id WHERE metrics.metric_hash = &#39;CE71BF280B4EB4B5&#39;;&quot;
+ ¥ùÓÇÖî&#39;½ìçïÏáÌµéºÚåï¸Î&quot;editing_timeR¦£
+uSELECT COUNT(metric_value) FROM metrics WHERE metrics.metric_hash = &#39;CE71BF280B4EB4B5&#39; AND metrics.metric_value &gt; 45;
+¥ùÓÇÖî&#39;
+µéºÚåï¸Î&quot;editing_sessionsR¬©
+vSELECT COUNT(metric_value) FROM metrics WHERE metrics.metric_hash = &#39;CE71BF280B4EB4B5&#39; AND metrics.metric_value &gt; 120;
+¥ùÓÇÖî&#39;
+µéºÚåï¸Î&quot;long_editing_sessionsRâß
+WITH on_site_urlids AS (SELECT DISTINCT url_id FROM urls WHERE instr(url, ?) &gt; 0) SELECT COUNT(metric_value) FROM metrics INNER JOIN on_site_urlids ON metrics.url_id = on_site_urlids.url_id WHERE metrics.metric_hash = &#39;CE71BF280B4EB4B5&#39; AND metrics.metric_value &gt; 45;
+¥ùÓÇÖî&#39;
+µéºÚåï¸Î
+ &quot;
+nameorigin&quot;editing_sessions_on_siteRèå
+WITH on_site_urlids AS (SELECT DISTINCT url_id FROM urls WHERE instr(url, ?) &gt; 0) SELECT COUNT(metric_value) FROM metrics INNER JOIN on_site_urlids ON metrics.url_id = on_site_urlids.url_id WHERE metrics.metric_hash = &#39;CE71BF280B4EB4B5&#39; AND metrics.metric_value &gt; 120;
+¥ùÓÇÖî&#39;
+µéºÚåï¸Î
+ &quot;
+nameorigin&quot;long_editing_sessions_on_siteRþû
+ÈWITH on_site_urlids AS (SELECT DISTINCT url_id FROM urls WHERE instr(url, ?) &gt; 0), event_ids_for_field AS ( SELECT DISTINCT event_id FROM metrics WHERE metrics.metric_hash = &#39;AE239414CC02813B&#39; AND metrics.metric_value = ? ), event_ids_for_form AS ( SELECT DISTINCT event_id FROM metrics WHERE metrics.metric_hash = &#39;42D464F8DC98BC83&#39; AND metrics.metric_value = ? ) SELECT COUNT(metric_value) FROM metrics INNER JOIN event_ids_for_field ON metrics.event_id = event_ids_for_field.event_id INNER JOIN event_ids_for_form ON metrics.event_id = event_ids_for_form.event_id INNER JOIN on_site_urlids ON metrics.url_id = on_site_urlids.url_id WHERE metrics.metric_hash = &#39;CE71BF280B4EB4B5&#39; AND metrics.metric_value &gt; 45;+
+)¥ùÓÇÖî&#39;ùâäêB»àÌå®µéºÚåï¸Î
+ &quot;
+nameorigin$
+&quot;
+namefield_signature#
+&quot;
+nameform_signature&quot;editing_sessions_on_fieldR
+ÉWITH on_site_urlids AS (SELECT DISTINCT url_id FROM urls WHERE instr(url, ?) &gt; 0), event_ids_for_field AS ( SELECT DISTINCT event_id FROM metrics WHERE metrics.metric_hash = &#39;AE239414CC02813B&#39; AND metrics.metric_value = ? ), event_ids_for_form AS ( SELECT DISTINCT event_id FROM metrics WHERE metrics.metric_hash = &#39;42D464F8DC98BC83&#39; AND metrics.metric_value = ? ) SELECT COUNT(metric_value) FROM metrics INNER JOIN event_ids_for_field ON metrics.event_id = event_ids_for_field.event_id INNER JOIN event_ids_for_form ON metrics.event_id = event_ids_for_form.event_id INNER JOIN on_site_urlids ON metrics.url_id = on_site_urlids.url_id WHERE metrics.metric_hash = &#39;CE71BF280B4EB4B5&#39; AND metrics.metric_value &gt; 120;+
+)¥ùÓÇÖî&#39;ùâäêB»àÌå®µéºÚåï¸Î
+ &quot;
+nameorigin$
+&quot;
+namefield_signature#
+&quot;
+nameform_signature&quot;long_editing_sessions_on_fieldR
+½WITH on_site_urlids AS (SELECT DISTINCT url_id FROM urls WHERE instr(url, ?) &gt; 0), event_ids AS (SELECT DISTINCT event_id FROM metrics WHERE metrics.metric_hash = &#39;CCC33F79ECE7363D&#39; AND metrics.metric_value IN (0, 14)) SELECT IFNULL(SUM(metric_value), 0) FROM metrics INNER JOIN event_ids ON metrics.event_id = event_ids.event_id INNER JOIN on_site_urlids ON metrics.url_id = on_site_urlids.url_id WHERE metrics.metric_hash = &#39;CE71BF280B4EB4B5&#39;;&quot;
+ ¥ùÓÇÖî&#39;½ìçïÏáÌµéºÚåï¸Î
+ &quot;
+nameorigin&quot;editing_time_on_siteR
+½WITH on_site_urlids AS (SELECT DISTINCT url_id FROM urls WHERE instr(url, ?) &gt; 0), event_ids AS (SELECT DISTINCT event_id FROM metrics WHERE metrics.metric_hash = &#39;CCC33F79ECE7363D&#39; AND metrics.metric_value IN (0, 14)) SELECT IFNULL(SUM(metric_value), 0) FROM metrics INNER JOIN event_ids ON metrics.event_id = event_ids.event_id INNER JOIN on_site_urlids ON metrics.url_id = on_site_urlids.url_id WHERE metrics.metric_hash = &#39;4E7D579594EB8315&#39;;!
+¥ùÓÇÖî&#39;®§ÙòÕ¾N½ìçïÏáÌ
+ &quot;
+nameorigin&quot;words_typed_on_siteR´±
+ãWITH on_site_urlids AS (SELECT DISTINCT url_id FROM urls WHERE instr(url, ?) &gt; 0) SELECT COUNT(id) FROM metrics INNER JOIN on_site_urlids ON metrics.url_id = on_site_urlids.url_id WHERE metrics.metric_hash = &#39;64BD7CCE5A95BF00&#39;;
+¦îÊà¹¬	þÖÔåßÞd
+ &quot;
+nameorigin&quot;page_loads_on_siteRwu
+MSELECT COUNT(id) FROM metrics WHERE metrics.metric_hash = &#39;64BD7CCE5A95BF00&#39;;
+¦îÊà¹¬	þÖÔåßÞd&quot;
+page_loadsRÛØ
+£SELECT COUNT(DISTINCT CAST((event_timestamp / 1000000 / 60 / 10) AS int)) FROM metrics WHERE metrics.metric_hash = &#39;AD411B741D0DA012&#39; AND metrics.metric_value &gt; 0;
+£ºè¢ºØµîô
+À¶èÁîÆ ­&quot;compose_session_countRâß
+£SELECT COUNT(DISTINCT CAST((event_timestamp / 1000000 / 60 / 10) AS int)) FROM metrics WHERE metrics.metric_hash = &#39;B4CFE8741404B691&#39; AND metrics.metric_value &gt; 0;
+£ºè¢ºØµîô
+í Áúç´&quot;compose_insert_session_countR
+gSELECT IFNULL(SUM(metrics.metric_value), 0) FROM metrics WHERE metrics.metric_hash = &#39;534661B278B11BD&#39;;
+äÙ´Ú¥§7	½£¬¼²Ã&quot;nudge_showsR
+hSELECT IFNULL(SUM(metrics.metric_value), 0) FROM metrics WHERE metrics.metric_hash = &#39;19E16122849E343B&#39;;
+äÙ´Ú¥§7	»èø¤¨¤Øð&quot;nudge_clicksR
+hSELECT IFNULL(SUM(metrics.metric_value), 0) FROM metrics WHERE metrics.metric_hash = &#39;79964621D357AB88&#39;;
+äÙ´Ú¥§7	×ÞÄËy&quot;nudge_site_disablesR
+hSELECT IFNULL(SUM(metrics.metric_value), 0) FROM metrics WHERE metrics.metric_hash = &#39;756F6A466879157E&#39;;
+äÙ´Ú¥§7	þªäÃæÈÚ·u&quot;nudge_global_disablesRËÈ
+ýWITH on_site_urlids AS (SELECT DISTINCT url_id FROM urls WHERE instr(url, ?) &gt; 0) SELECT IFNULL(SUM(metrics.metric_value), 0) FROM metrics INNER JOIN on_site_urlids ON metrics.url_id = on_site_urlids.url_id WHERE metrics.metric_hash = &#39;534661B278B11BD&#39;;
+äÙ´Ú¥§7	½£¬¼²Ã
+ &quot;
+nameorigin&quot;nudge_shows_siteRÍÊ
+þWITH on_site_urlids AS (SELECT DISTINCT url_id FROM urls WHERE instr(url, ?) &gt; 0) SELECT IFNULL(SUM(metrics.metric_value), 0) FROM metrics INNER JOIN on_site_urlids ON metrics.url_id = on_site_urlids.url_id WHERE metrics.metric_hash = &#39;19E16122849E343B&#39;;
+äÙ´Ú¥§7	»èø¤¨¤Øð
+ &quot;
+nameorigin&quot;nudge_clicks_site!
+
+  @?ShowDontShowBR *https://optimizationguide-pa.googleapis.com/downloads?name=240731042075&amp;target=OPTIMIZATION_TARGET_SEGMENTATION_COMPOSE_PROMOTION</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>1679317318</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+						
+						
+						
+						
+						
+						
+					</ol>
+				</li>
+				  
+				 
+				
+				
+				
+				
+				<li id="alerts--risk-0-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informational</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						
+						
+						
+						
+						
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://127.0.0.1:3004</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-12">Session Management Response Identified</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">POST http://127.0.0.1:3004/auth/login</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The given response has been identified as containing a session management token. The &#39;Other Info&#39; field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to &quot;Auto-Detect&quot; then this rule will change the session management to use the tokens identified.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>json:token</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (614 bytes)</summary>
+				
+				<pre><code>POST http://127.0.0.1:3004/auth/login HTTP/1.1
+host: 127.0.0.1:3004
+Proxy-Connection: keep-alive
+Content-Length: 49
+sec-ch-ua-platform: &quot;Windows&quot;
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+sec-ch-ua: &quot;Google Chrome&quot;;v=&quot;131&quot;, &quot;Chromium&quot;;v=&quot;131&quot;, &quot;Not_A Brand&quot;;v=&quot;24&quot;
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:5173
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:5173/
+Accept-Language: sv-SE,sv;q=0.9,en-US;q=0.8,en;q=0.7
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (49 bytes)</summary>
+				
+				<pre><code>{&quot;mail&quot;:&quot;vuetest@test.se&quot;,&quot;password&quot;:&quot;vuetester&quot;}</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (983 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Content-Security-Policy: default-src &#39;self&#39;;base-uri &#39;self&#39;;font-src &#39;self&#39; https: data:;form-action &#39;self&#39;;frame-ancestors &#39;self&#39;;img-src &#39;self&#39; data:;object-src &#39;none&#39;;script-src &#39;self&#39;;script-src-attr &#39;none&#39;;style-src &#39;self&#39; https: &#39;unsafe-inline&#39;;upgrade-insecure-requests
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+Origin-Agent-Cluster: ?1
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+X-DNS-Prefetch-Control: off
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-Permitted-Cross-Domain-Policies: none
+X-XSS-Protection: 0
+Access-Control-Allow-Origin: http://localhost:5173
+Vary: Origin
+Access-Control-Allow-Credentials: true
+Content-Type: application/json; charset=utf-8
+Content-Length: 306
+ETag: W/&quot;132-4//DVkCwF0hMaWF7yRDC2E4ytdI&quot;
+Date: Fri, 06 Dec 2024 15:38:12 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (306 bytes)</summary>
+				
+				<pre><code>{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlkIjoyNywiZW1haWwiOiJ2dWV0ZXN0QHRlc3Quc2UiLCJpYXQiOjE3MzM0OTk0OTIsImV4cCI6MTczMzUwMzA5Mn0.He6jRW93JkDOwrD5kqKJemHmtCdGYIaJi62VBQIid9I&quot;,&quot;role&quot;:&quot;user&quot;,&quot;id&quot;:27,&quot;mail&quot;:&quot;vuetest@test.se&quot;,&quot;address&quot;:&quot;adress&quot;,&quot;zipcode&quot;:&quot;12345&quot;,&quot;city&quot;:&quot;testtown&quot;}</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>token</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlkIjoyNywiZW1haWwiOiJ2dWV0ZXN0QHRlc3Quc2UiLCJpYXQiOjE3MzM0OTk0OTIsImV4cCI6MTczMzUwMzA5Mn0.He6jRW93JkDOwrD5kqKJemHmtCdGYIaJi62VBQIid9I</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:5173</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-10">Modern Web Application</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:5173</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>No links have been found while there are scripts, which is an indication that this is a modern web application.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (197 bytes)</summary>
+				
+				<pre><code>GET http://localhost:5173 HTTP/1.1
+host: localhost:5173
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (249 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: text/html
+Cache-Control: no-cache
+Etag: W/&quot;229-yiGK1qodB+IywYkQBVKX2IquYEo&quot;
+Date: Fri, 06 Dec 2024 15:19:22 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 553
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (553 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;&quot;&gt;
+  &lt;head&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/@id/virtual:vue-devtools-path:overlay.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/@id/virtual:vue-inspector-path:load.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script type=&quot;module&quot; src=&quot;/@vite/client&quot;&gt;&lt;/script&gt;
+
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Vite App&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/src/main.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>&lt;script type=&quot;module&quot; src=&quot;/@id/virtual:vue-devtools-path:overlay.js&quot;&gt;&lt;/script&gt;</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>This is an informational alert and so no changes are required.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informational</span>, <span>Confidence</span>=<span
+							class="confidence-level">Low</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						
+						
+						
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://content-autofill.googleapis.com</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-11">Re-examine Cache-control Directives</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTMxLjAuNjc3OC4xMDkSGQnJi3XGkzNlbBIFDZFhlU4hanPgDker4tU=?alt=proto</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses">WSTG-v42-ATHN-06</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/525.html">CWE-525</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (584 bytes)</summary>
+				
+				<pre><code>GET https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTMxLjAuNjc3OC4xMDkSGQnJi3XGkzNlbBIFDZFhlU4hanPgDker4tU=?alt=proto HTTP/1.1
+host: content-autofill.googleapis.com
+Connection: keep-alive
+X-Goog-Encode-Response-If-Executable: base64
+X-Goog-Api-Key: AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw
+X-Client-Data: CKuWywE=
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: empty
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+Accept-Language: sv-SE,sv;q=0.9,en-US;q=0.8,en;q=0.7
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (460 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Cache-Control: private,max-age=604800
+Content-Type: text/plain
+X-Goog-Safety-Encoding: base64
+X-Goog-Safety-Content-Type: application/x-protobuf
+Vary: X-Origin
+Vary: Referer
+Date: Fri, 06 Dec 2024 15:32:47 GMT
+Server: ESF
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3=&quot;:443&quot;; ma=2592000,h3-29=&quot;:443&quot;; ma=2592000
+Accept-Ranges: none
+Vary: Origin,Accept-Encoding
+content-length: 16
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (16 bytes)</summary>
+				
+				<pre><code>CgkKBw2RYZVOGgA=</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>cache-control</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>private,max-age=604800</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>For secure content, ensure the cache-control HTTP header is set with &quot;no-cache, no-store, must-revalidate&quot;. If an asset should be cached consider setting the directives &quot;public, max-age, immutable&quot;.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+						
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:5173</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-9">Information Disclosure - Suspicious Comments</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:5173/src/main.js</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/05-Review_Webpage_Content_for_Information_Leakage">WSTG-v42-INFO-05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html">OWASP_2017_A03</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/200.html">CWE-200</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The following pattern was used: \bFROM\b and was detected 3 times, the first in the element starting with: &quot;import { createApp } from &quot;/node_modules/.vite/deps/vue.js?v=20c91c6a&quot;&quot;, see evidence field for the suspicious comment/snippet.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (241 bytes)</summary>
+				
+				<pre><code>GET http://localhost:5173/src/main.js HTTP/1.1
+host: localhost:5173
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+pragma: no-cache
+cache-control: no-cache
+referer: http://localhost:5173
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (255 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: text/javascript
+Cache-Control: no-cache
+Etag: W/&quot;ee-jxxRYolAiKWeoCrdtq+cQIjbHXY&quot;
+Date: Fri, 06 Dec 2024 15:19:24 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 1453
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1453 bytes)</summary>
+				
+				<pre><code>//import &#39;./assets/main.css&#39;
+
+import { createApp } from &quot;/node_modules/.vite/deps/vue.js?v=20c91c6a&quot;
+import App from &quot;/src/App.vue&quot;
+import router from &quot;/src/router/index.js&quot;
+
+const app = createApp(App)
+
+app.use(router)
+
+app.mount(&#39;#app&#39;)
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uanMiXSwic291cmNlc0NvbnRlbnQiOlsiLy9pbXBvcnQgJy4vYXNzZXRzL21haW4uY3NzJ1xuXG5pbXBvcnQgeyBjcmVhdGVBcHAgfSBmcm9tIFwiL25vZGVfbW9kdWxlcy8udml0ZS9kZXBzL3Z1ZS5qcz92PTIwYzkxYzZhXCJcbmltcG9ydCBBcHAgZnJvbSBcIi9zcmMvQXBwLnZ1ZVwiXG5pbXBvcnQgcm91dGVyIGZyb20gXCIvc3JjL3JvdXRlci9pbmRleC5qc1wiXG5cbmNvbnN0IGFwcCA9IGNyZWF0ZUFwcChBcHApXG5cbmFwcC51c2Uocm91dGVyKVxuXG5hcHAubW91bnQoJyNhcHAnKVxuIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLENBQUMsQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDLENBQUMsTUFBTSxDQUFDLElBQUksQ0FBQyxHQUFHLENBQUM7QUFDNUI7QUFDQSxNQUFNLENBQUMsQ0FBQyxDQUFDLFNBQVMsQ0FBQyxDQUFDLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQyxZQUFZLENBQUMsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQztBQUN0RSxNQUFNLENBQUMsR0FBRyxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUMsR0FBRyxDQUFDLEdBQUcsQ0FBQyxHQUFHLENBQUM7QUFDOUIsTUFBTSxDQUFDLE1BQU0sQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDLEVBQUUsQ0FBQztBQUN6QztBQUNBLEtBQUssQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLFNBQVMsQ0FBQyxHQUFHLENBQUM7QUFDMUI7QUFDQSxHQUFHLENBQUMsR0FBRyxDQUFDLE1BQU0sQ0FBQztBQUNmO0FBQ0EsR0FBRyxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUMsR0FBRyxDQUFDLENBQUM7In0=</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>from</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+			</ol>
+		</section>
+
+		<section id="appendix" class="appendix">
+			<h2>Appendix</h2>
+
+			<section id="alert-types" class="alert-types">
+				<h3>Alert types</h3>
+				<p class="alert-types-intro">This section contains additional information on the types of alerts in the report.</p>
+				<ol>
+					<li
+						id="alert-type-0">
+						<h4>Cloud Metadata Potentially Exposed</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/90034/">Cloud Metadata Potentially Exposed</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.nginx.com/blog/trust-no-one-perils-of-trusting-user-input/">https://www.nginx.com/blog/trust-no-one-perils-of-trusting-user-input/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-1">
+						<h4>Content Security Policy (CSP) Header Not Set</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10038/">Content Security Policy (CSP) Header Not Set</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a></li>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a></li>
+										<li><a
+											href="https://www.w3.org/TR/CSP/">https://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="https://w3c.github.io/webappsec-csp/">https://w3c.github.io/webappsec-csp/</a></li>
+										<li><a
+											href="https://web.dev/articles/csp">https://web.dev/articles/csp</a></li>
+										<li><a
+											href="https://caniuse.com/#feat=contentsecuritypolicy">https://caniuse.com/#feat=contentsecuritypolicy</a></li>
+										<li><a
+											href="https://content-security-policy.com/">https://content-security-policy.com/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-2">
+						<h4>Cross-Domain Misconfiguration</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10098/">Cross-Domain Misconfiguration</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/264.html">264</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>14</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy">https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-3">
+						<h4>Format String Error</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/30002/">Format String Error</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/134.html">134</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>6</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://owasp.org/www-community/attacks/Format_string_attack">https://owasp.org/www-community/attacks/Format_string_attack</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-4">
+						<h4>Missing Anti-clickjacking Header</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10020/">Anti-clickjacking Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/1021.html">1021</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-5">
+						<h4>Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10036/">HTTP Server Response Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://httpd.apache.org/docs/current/mod/core.html#servertokens">https://httpd.apache.org/docs/current/mod/core.html#servertokens</a></li>
+										<li><a
+											href="https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)">https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)</a></li>
+										<li><a
+											href="https://www.troyhunt.com/shhh-dont-let-your-response-headers/">https://www.troyhunt.com/shhh-dont-let-your-response-headers/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-6">
+						<h4>Strict-Transport-Security Header Not Set</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10035/">Strict-Transport-Security Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/319.html">319</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</a></li>
+										<li><a
+											href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a></li>
+										<li><a
+											href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</a></li>
+										<li><a
+											href="https://caniuse.com/stricttransportsecurity">https://caniuse.com/stricttransportsecurity</a></li>
+										<li><a
+											href="https://datatracker.ietf.org/doc/html/rfc6797">https://datatracker.ietf.org/doc/html/rfc6797</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-7">
+						<h4>Timestamp Disclosure - Unix</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10096/">Timestamp Disclosure</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://cwe.mitre.org/data/definitions/200.html">https://cwe.mitre.org/data/definitions/200.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-8">
+						<h4>X-Content-Type-Options Header Missing</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10021/">X-Content-Type-Options Header Missing</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)">https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)</a></li>
+										<li><a
+											href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-9">
+						<h4>Information Disclosure - Suspicious Comments</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10027/">Information Disclosure - Suspicious Comments</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							
+						</table>
+					</li>
+					<li
+						id="alert-type-10">
+						<h4>Modern Web Application</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10109/">Modern Web Application</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							
+						</table>
+					</li>
+					<li
+						id="alert-type-11">
+						<h4>Re-examine Cache-control Directives</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10015/">Re-examine Cache-control Directives</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a></li>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a></li>
+										<li><a
+											href="https://grayduck.mn/2021/09/13/cache-control-recommendations/">https://grayduck.mn/2021/09/13/cache-control-recommendations/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-12">
+						<h4>Session Management Response Identified</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10112/">Session Management Response Identified</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id">https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+				</ol>
+			</section>
+		</section>
+		 
+	</main>
+</body>
+</html>
+
+
+
