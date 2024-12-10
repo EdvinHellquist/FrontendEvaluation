@@ -23,6 +23,24 @@ app.use('/shop', productRouter)
 app.use('/search', searchRouter)
 app.use('/contact', contactRouter)
 
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "https://trusted.cdn.com"],
+        styleSrc: ["'self'", "https://fonts.googleapis.com"],
+        imgSrc: ["'self'", "data:", "https://images.example.com"], 
+        fontSrc: ["'self'", "https://fonts.gstatic.com"], 
+        connectSrc: ["'self'", "http://localhost:5173", "http://zap.proxy.local", "http://127.0.0.1:8080"], 
+        objectSrc: ["'none'"], 
+        frameAncestors: ["'self'"], 
+        formAction: ["'self'", "http://localhost:5173"], 
+        upgradeInsecureRequests: [],
+      },
+    },
+  })
+)
 
 app.use((req, res, next) => {
   res.removeHeader('Server');
